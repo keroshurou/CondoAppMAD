@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".EditParcelDetails">
+
+    <TextView
+        android:id="@+id/editParcelInfo"
+        android:layout_width="335dp"
+        android:layout_height="37dp"
+        android:text="@string/insPTextEdit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <EditText
+        android:id="@+id/editUpCollectorName"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/editCollectorName"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <EditText
+        android:id="@+id/edtUpUnitNumber"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/editParcelUnit"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpExpressBrand" />
+
+    <EditText
+        android:id="@+id/edtUpExpressBrand"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/editExpressBrand"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editUpCollectorName" />
+
+    <EditText
+        android:id="@+id/edtUpTrackingNumber"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/editExpressBrand"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpUnitNumber" />
+
+    <EditText
+        android:id="@+id/edtUpDeliveredDate"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/editDeliveredDate"
+        android:inputType="date"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpTrackingNumber" />
+
+    <EditText
+        android:id="@+id/edtUpCollectedStatus"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/editCollectStatus"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpDeliveredDate" />
+
+    <EditText
+        android:id="@+id/edtUpCollectedDate"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/editCollectedDate"
+        android:inputType="date"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedStatus" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/black_btn"
+        android:text="Update"
+        android:textColor="#FDFCFC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedDate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

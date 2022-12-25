@@ -1,0 +1,36 @@
+<resources>
+    <!-- Main Activity Parcel. -->
+    <string name="app_name">Condominium Management Application</string>
+    <string name="parcelBtn1">Insert Parcel Detail</string>
+    <string name="parcelBtn2">Edit Parcel Detail</string>
+    <string name="parcelBtn3">View Parcel</string>
+
+    <!-- Activity Insert Parcel. -->
+    <string name="insPTextInsert">Insert Parcel Information</string>
+    <string name="insPText2Direction">Please fill up the information below</string>
+    <string name="insCollectorName">Enter Recipient Name</string>
+    <string name="insParcelUnit">Enter Unit Number</string>
+    <string name="insExpressBrand">Enter Express Brand (Courier) </string>
+    <string name="insTrackingNumber">Enter TrackingNumber</string>
+    <string name="insDeliveredDate">Enter Delivered Date</string>
+    <string name="insCollectStatus">Enter Collect Status</string>
+    <string name="insCollectedDate">Enter Collected Date</string>
+    <string name="add">Add</string>
+    <string name="addAnother">Add another parcel</string>
+    <string name="done">Done</string>
+    <string name="managementID">Enter your ID</string>
+
+    <!-- Activity Update Parcel. -->
+    <string name="insPTextEdit">Update Parcel Information</string>
+    <string name="editCollectorName">Enter Recipient Name</string>
+    <string name="editParcelUnit">Enter Unit Number</string>
+    <string name="editExpressBrand">Enter Express Brand (Courier) </string>
+    <string name="editTrackingNumber">Enter TrackingNumber</string>
+    <string name="editDeliveredDate">Enter Delivered Date</string>
+    <string name="editCollectStatus">Enter Collect Status</string>
+    <string name="editCollectedDate">Enter Collected Date</string>
+
+    <!-- Activity View/Report Parcel. -->
+    <string name="insReport">Parcel Information</string>
+    <string name="searchBar">Search</string>
+</resources>
