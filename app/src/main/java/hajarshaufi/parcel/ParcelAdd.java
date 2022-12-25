@@ -24,7 +24,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ParcelDetails extends AppCompatActivity {
+public class ParcelAdd extends AppCompatActivity {
 
     //Declare EditText & Button
     private EditText managementIDEdt, collectorNameEdt, parcelUnitEdt, expressBrandEdt, trackingNumberEdt,
@@ -40,7 +40,7 @@ public class ParcelDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parcel_details);
+        setContentView(R.layout.activity_parcel_add);
 
         //Get all IDs
         managementIDEdt = findViewById(R.id.edtMangID);
@@ -59,7 +59,7 @@ public class ParcelDetails extends AppCompatActivity {
 
                 getParcel();
 
-                Intent intentSuccess = new Intent(ParcelDetails.this, ParcelSuccess.class);
+                Intent intentSuccess = new Intent(ParcelAdd.this, ParcelSuccess.class);
                 startActivity(intentSuccess);
             }
         });
@@ -105,7 +105,7 @@ public class ParcelDetails extends AppCompatActivity {
         String url = "http://192.168.56.1/condoapp/addParcel.php";
 
         // creating a new variable for our request queue
-        RequestQueue queue = Volley.newRequestQueue(ParcelDetails.this);
+        RequestQueue queue = Volley.newRequestQueue(ParcelAdd.this);
 
         // on below line we are calling a string
         // request method to post the data to our API
@@ -118,7 +118,7 @@ public class ParcelDetails extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
-                    Toast.makeText(ParcelDetails.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ParcelAdd.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -136,7 +136,7 @@ public class ParcelDetails extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // method to handle errors.
-                Toast.makeText(ParcelDetails.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ParcelAdd.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override

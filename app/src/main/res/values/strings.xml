@@ -33,4 +33,8 @@
     <!-- Activity View/Report Parcel. -->
     <string name="insReport">Parcel Information</string>
     <string name="searchBar">Search</string>
+
+    <!-- Layout parcel_item.xml -->
+    <string name="txt">Tracking Number</string>
+    <string name="collectorName">CollectorName</string>
 </resources>

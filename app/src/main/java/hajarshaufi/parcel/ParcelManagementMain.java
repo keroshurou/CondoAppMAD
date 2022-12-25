@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class ParcelManagementMain extends AppCompatActivity {
 
     Button insertParcelBtn, editParcelBtn, parcelReportBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_parcel_management_main);
 
         insertParcelBtn = findViewById(R.id.insertParcelBtn);
         editParcelBtn = findViewById(R.id.edtParcelBtn);
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         insertParcelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentParcel = new Intent(MainActivity.this, ParcelDetails.class);
+                Intent intentParcel = new Intent(ParcelManagementMain.this, ParcelAdd.class);
                 startActivity(intentParcel);
             }
         });
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         editParcelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentEditParcel = new Intent(MainActivity.this, ParcelDetails.class);
+                Intent intentEditParcel = new Intent(ParcelManagementMain.this, ParcelAdd.class);
                 startActivity(intentEditParcel);
             }
         });
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         parcelReportBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentParcelReport = new Intent(MainActivity.this, ParcelList.class);
+                Intent intentParcelReport = new Intent(ParcelManagementMain.this, ParcelView.class);
                 startActivity(intentParcelReport);
             }
         });
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**public void fnInsertParcel (View view){
 
-        Intent intent = new Intent(MainActivity.this, InsertParcelDetails.class);
+        Intent intent = new Intent(ParcelManagementMain.this, InsertParcelDetails.class);
         startActivity(intent);
     }**/
 }

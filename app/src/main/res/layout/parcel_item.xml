@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id = "@+id/number"
+        app:cardCornerRadius="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/txt_id"
+            android:text="1"
+            android:textSize="20sp"
+            android:gravity="center_vertical|center"
+            android:textColor="@android:color/white"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_trackingNumber"
+            android:layout_width="230dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Tracking Number"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_Name"
+            android:layout_width="230dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Collector Name"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -23,7 +23,7 @@ public class ParcelSuccess extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intentAddAnother = new Intent(ParcelSuccess.this, ParcelDetails.class);
+                Intent intentAddAnother = new Intent(ParcelSuccess.this, ParcelAdd.class);
                 startActivity(intentAddAnother);
             }
         });
@@ -31,7 +31,7 @@ public class ParcelSuccess extends AppCompatActivity {
         btnDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentDone = new Intent(ParcelSuccess.this, MainActivity.class);
+                Intent intentDone = new Intent(ParcelSuccess.this, ParcelManagementMain.class);
                 startActivity(intentDone);
             }
         });

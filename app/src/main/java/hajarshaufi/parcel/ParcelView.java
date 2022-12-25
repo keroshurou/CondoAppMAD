@@ -2,7 +2,6 @@ package hajarshaufi.parcel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,7 +13,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.HttpClientStack;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -25,7 +23,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ParcelList extends AppCompatActivity {
+public class ParcelView extends AppCompatActivity {
 
     private EditText searchBarEdt;
     private TextView textView;
@@ -33,7 +31,7 @@ public class ParcelList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parcel_list);
+        setContentView(R.layout.activity_parcel_view);
 
         //Get all IDs
         EditText searchBarEdt = findViewById(R.id.editSearchBar);
