@@ -36,8 +36,8 @@ public class ParcelAdapter extends ArrayAdapter<Parcel> {
 
         tvID.setText(arrayListParcel.get(position).getParcelID());
         tvName.setText(arrayListParcel.get(position).getCollectorName());
-        tvName.setText(arrayListParcel.get(position).getTrackingNumber());
+        tvTrackingNumber.setText(arrayListParcel.get(position).getTrackingNumber());
 
-        return super.getView(position, convertView, parent);
+        return view;
     }
 }

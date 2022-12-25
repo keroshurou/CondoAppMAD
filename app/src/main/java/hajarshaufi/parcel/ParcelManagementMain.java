@@ -42,7 +42,7 @@ public class ParcelManagementMain extends AppCompatActivity {
         parcelReportBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentParcelReport = new Intent(ParcelManagementMain.this, ParcelView.class);
+                Intent intentParcelReport = new Intent(ParcelManagementMain.this, ParcelListView.class);
                 startActivity(intentParcelReport);
             }
         });

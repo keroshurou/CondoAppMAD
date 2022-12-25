@@ -102,7 +102,7 @@ public class ParcelAdd extends AppCompatActivity {
                                    String collectStatus) {
 
         // url to post our data
-        String url = "http://192.168.56.1/condoapp/addParcel.php";
+        String url = "http://192.168.56.101/condoapp/addParcel.php";
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(ParcelAdd.this);
