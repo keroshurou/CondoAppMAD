@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -31,6 +32,7 @@ public class ParcelAdd extends AppCompatActivity {
             deliveredDateEdt, collectStatusEdt, collectedDateEdt;
 
     Button submitAddParcel;
+    ImageButton btnBack;
     private String collectorName, parcelUnit, expressBrand, trackingNumber,
             deliveredDate, collectStatus;
     private int managementID;
@@ -52,6 +54,7 @@ public class ParcelAdd extends AppCompatActivity {
         /**collectStatusEdt = findViewById(R.id.edtCollectStatus);
         collectedDateEdt = findViewById(R.id.edtCollectedDate);**/
         submitAddParcel = findViewById(R.id.addBtn);
+        btnBack = findViewById(R.id.btnBack);
 
         submitAddParcel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +64,15 @@ public class ParcelAdd extends AppCompatActivity {
 
                 Intent intentSuccess = new Intent(ParcelAdd.this, ParcelSuccess.class);
                 startActivity(intentSuccess);
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intentBack = new Intent(ParcelAdd.this, ParcelManagementMain.class);
+                startActivity(intentBack);
             }
         });
     }
@@ -171,4 +183,5 @@ public class ParcelAdd extends AppCompatActivity {
         // a json object request.
         queue.add(request);
     }
+
 }

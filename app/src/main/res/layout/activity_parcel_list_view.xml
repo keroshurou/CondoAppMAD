@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageBuilding"
         android:layout_width="412dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"

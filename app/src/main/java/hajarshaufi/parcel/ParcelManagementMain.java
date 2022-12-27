@@ -49,9 +49,4 @@ public class ParcelManagementMain extends AppCompatActivity {
 
     }
 
-    /**public void fnInsertParcel (View view){
-
-        Intent intent = new Intent(ParcelManagementMain.this, InsertParcelDetails.class);
-        startActivity(intent);
-    }**/
 }

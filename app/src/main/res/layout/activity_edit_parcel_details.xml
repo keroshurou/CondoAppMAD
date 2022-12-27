@@ -7,21 +7,55 @@
     android:background="@color/background_color"
     tools:context=".EditParcelDetails">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitEnd"
+        app:srcCompat="@drawable/building" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/back_button"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <TextView
         android:id="@+id/editParcelInfo"
-        android:layout_width="335dp"
-        android:layout_height="37dp"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="76dp"
         android:text="@string/insPTextEdit"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="22sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="53dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/editUpCollectorName"
+        android:id="@+id/edtUpManagementID"
         android:layout_width="320dp"
         android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/editManagementID"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/editParcelInfo"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <EditText
+        android:id="@+id/edtUpCollectorName"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
@@ -29,10 +63,8 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="132dp" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpManagementID"
+        tools:layout_editor_absoluteX="46dp" />
 
     <EditText
         android:id="@+id/edtUpUnitNumber"
@@ -46,10 +78,8 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpExpressBrand" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectorName"
+        tools:layout_editor_absoluteX="46dp" />
 
     <EditText
         android:id="@+id/edtUpExpressBrand"
@@ -66,7 +96,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editUpCollectorName" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpTrackingNumber" />
 
     <EditText
         android:id="@+id/edtUpTrackingNumber"
@@ -76,14 +106,12 @@
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="@string/editExpressBrand"
+        android:hint="@string/editTrackingNumber"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpUnitNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpUnitNumber"
+        tools:layout_editor_absoluteX="46dp" />
 
     <EditText
         android:id="@+id/edtUpDeliveredDate"
@@ -98,9 +126,8 @@
         android:padding="10dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpTrackingNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpExpressBrand" />
 
     <EditText
         android:id="@+id/edtUpCollectedStatus"
@@ -114,10 +141,8 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpDeliveredDate" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpDeliveredDate"
+        tools:layout_editor_absoluteX="46dp" />
 
     <EditText
         android:id="@+id/edtUpCollectedDate"
@@ -131,22 +156,19 @@
         android:inputType="date"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedStatus" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedStatus"
+        tools:layout_editor_absoluteX="46dp" />
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="136dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/black_btn"
         android:text="Update"
         android:textColor="#FDFCFC"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedDate" />
 

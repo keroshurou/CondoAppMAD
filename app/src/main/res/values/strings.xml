@@ -25,10 +25,11 @@
     <string name="editCollectorName">Enter Recipient Name</string>
     <string name="editParcelUnit">Enter Unit Number</string>
     <string name="editExpressBrand">Enter Express Brand (Courier) </string>
-    <string name="editTrackingNumber">Enter TrackingNumber</string>
+    <string name="editTrackingNumber">Enter Tracking Number</string>
     <string name="editDeliveredDate">Enter Delivered Date</string>
     <string name="editCollectStatus">Enter Collect Status</string>
     <string name="editCollectedDate">Enter Collected Date</string>
+    <string name="editManagementID">Enter Management ID</string>
 
     <!-- Activity View/Report Parcel. -->
     <string name="insReport">Parcel Information</string>

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background_color"
+    android:orientation="vertical"
     tools:context=".ParcelAdd">
 
     <TextView
@@ -13,122 +13,42 @@
         android:layout_width="320dp"
         android:layout_height="25dp"
         android:layout_marginTop="80dp"
-        android:layout_marginLeft="20sp"
         android:text="@string/insPTextInsert"
         android:textAllCaps="false"
         android:textColor="#050505"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="55dp" />
 
     <TextView
         android:id="@+id/insParcelPage2"
         android:layout_width="320dp"
         android:layout_height="25dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="20sp"
+        android:layout_marginTop="12dp"
         android:text="@string/insPText2Direction"
         android:textAllCaps="false"
-        android:textSize="16sp"
         android:textColor="#050505"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/insParcelPage" />
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/insParcelPage"
+        tools:layout_editor_absoluteX="56dp" />
 
     <EditText
         android:id="@+id/edtCollectorName"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="20sp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
         android:hint="@string/insCollectorName"
-        android:textSize="16sp"
-        android:padding="10dp"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtMangID" />
-
-    <EditText
-        android:id="@+id/edtUnitNumber"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="20sp"
-        android:background="@drawable/white_column"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/insParcelUnit"
-        android:textSize="16sp"
         android:padding="10dp"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtCollectorName" />
-
-    <EditText
-        android:id="@+id/edtExpressBrand"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="20sp"
-        android:background="@drawable/white_column"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/insExpressBrand"
         android:textSize="16sp"
-        android:padding="10dp"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUnitNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/edtMangID"
+        tools:layout_editor_absoluteX="56dp" />
 
-    <EditText
-        android:id="@+id/edtTrackingNumber"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="20sp"
-        android:background="@drawable/white_column"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/insTrackingNumber"
-        android:textSize="16sp"
-        android:padding="10dp"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtExpressBrand" />
-
-    <EditText
-        android:id="@+id/edtDeliveredDate"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="20sp"
-        android:background="@drawable/white_column"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/insDeliveredDate"
-        android:textSize="16sp"
-        android:padding="10dp"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTrackingNumber" />
-<!--
+    <!--
     <EditText
         android:id="@+id/edtCollectStatus"
         android:layout_width="320dp"
@@ -157,48 +77,99 @@
         app:layout_constraintTop_toBottomOf="@+id/edtCollectStatus" />
 -->
 
+    <EditText
+        android:id="@+id/edtUnitNumber"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/insParcelUnit"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtCollectorName"
+        tools:layout_editor_absoluteX="55dp" />
+
+    <EditText
+        android:id="@+id/edtExpressBrand"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/insExpressBrand"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtTrackingNumber"
+        tools:layout_editor_absoluteX="56dp" />
+
+    <EditText
+        android:id="@+id/edtTrackingNumber"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/insTrackingNumber"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUnitNumber" />
+
+    <EditText
+        android:id="@+id/edtDeliveredDate"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/insDeliveredDate"
+        android:inputType="date"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtExpressBrand"
+        tools:layout_editor_absoluteX="56dp" />
+
     <Button
         android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/black_btn"
         android:text="@string/add"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtDeliveredDate"
-        app:layout_constraintVertical_bias="0.828" />
+        tools:layout_editor_absoluteX="170dp" />
 
     <EditText
         android:id="@+id/edtMangID"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="20sp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
         android:hint="@string/managementID"
-        android:textSize="16sp"
-        android:padding="10dp"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/insParcelPage2" />
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/insParcelPage2"
+        tools:layout_editor_absoluteX="55dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitEnd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/building"
         tools:visibility="gone" />
 
@@ -206,14 +177,9 @@
         android:id="@+id/btnBack"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="10sp"
         android:background="@drawable/back_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

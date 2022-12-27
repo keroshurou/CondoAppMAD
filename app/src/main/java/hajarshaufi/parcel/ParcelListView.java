@@ -68,8 +68,8 @@ public class ParcelListView extends AppCompatActivity {
                                         .putExtra("position",position));
                                 break;
                             case 1:
-                                //startActivity(new Intent(getApplicationContext(),EditParcelInfo.class)
-                                        //.putExtra("position",position));
+                                startActivity(new Intent(getApplicationContext(),EditParcelDetails.class)
+                                        .putExtra("position",position));
                                 break;
                             case 2:
                                 //deleteData(parcelArrayList.get(position).getParcelID());
