@@ -54,8 +54,8 @@ public class ParcelAdd extends AppCompatActivity {
         //Get all IDs
         collectorNameEdt = findViewById(R.id.edtCollectorName);
         parcelUnitEdt = findViewById(R.id.edtUnitNumber);
-        expressBrandEdt = findViewById(R.id.edtExpressBrand);
         trackingNumberEdt = findViewById(R.id.edtTrackingNumber);
+        expressBrandEdt = findViewById(R.id.edtExpressBrand);
         deliveredDateEdt = findViewById(R.id.edtDeliveredDate);
 
         submitAddParcel = findViewById(R.id.addBtn);
@@ -119,8 +119,8 @@ public class ParcelAdd extends AppCompatActivity {
 
         collectorName = collectorNameEdt.getText().toString();
         parcelUnit = parcelUnitEdt.getText().toString();
-        expressBrand = expressBrandEdt.getText().toString();
         trackingNumber = trackingNumberEdt.getText().toString();
+        expressBrand = expressBrandEdt.getText().toString();
         deliveredDate = deliveredDateEdt.getText().toString();
         collectStatus = availableStatus;
 
@@ -196,8 +196,8 @@ public class ParcelAdd extends AppCompatActivity {
                 // key and value pair to our parameters.
                 params.put("collectorName", collectorName);
                 params.put("parcelUnit", parcelUnit);
-                params.put("expressBrand", expressBrand);
                 params.put("trackingNumber", trackingNumber);
+                params.put("expressBrand", expressBrand);
                 params.put("deliveredDate", deliveredDate);
                 params.put("collectStatus", collectStatus);
 

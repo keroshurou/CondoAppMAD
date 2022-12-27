@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -30,8 +31,9 @@ import java.util.Map;
 public class EditParcelDetails extends AppCompatActivity {
 
     ImageButton btnBack;
-    EditText edtParcelID, edtUpManagementID, edtUpCollectorName, edtUpUnitNumber, edtUpTrackingNumber, edtUpExpressBrand,
+    EditText edtUpCollectorName, edtUpUnitNumber, edtUpTrackingNumber, edtUpExpressBrand,
             edtUpDeliveredDate, edtUpCollectedStatus, edtUpCollectedDate;
+    TextView edtParcelID;
 
     private int position;
     private DatePickerDialog datePicker;
@@ -44,7 +46,6 @@ public class EditParcelDetails extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
 
         edtParcelID = findViewById(R.id.edtUpParcelID);
-        //edtUpManagementID = findViewById(R.id.edtUpManagementID);
         edtUpCollectorName = findViewById(R.id.edtUpCollectorName);
         edtUpUnitNumber = findViewById(R.id.edtUpUnitNumber);
         edtUpTrackingNumber = findViewById(R.id.edtUpTrackingNumber);

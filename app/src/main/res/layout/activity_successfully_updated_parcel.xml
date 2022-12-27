@@ -7,12 +7,24 @@
     android:background="@color/background_color"
     tools:context=".SuccessfullyUpdatedParcel">
 
+    <ImageView
+        android:id="@+id/imageViewBuilding"
+        android:layout_width="414dp"
+        android:layout_height="734dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/building" />
 
     <Button
         android:id="@+id/btnViewParcel"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/black_btn"
         android:text="View Parcel"
         android:textColor="@color/text_color"
@@ -26,7 +38,7 @@
         android:id="@+id/imageSuccessful"
         android:layout_width="169dp"
         android:layout_height="167dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

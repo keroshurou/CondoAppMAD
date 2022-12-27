@@ -37,6 +37,7 @@ public class ParcelListView extends AppCompatActivity {
     ParcelAdapter parcelAdapter;
     public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
     String url = "http://192.168.43.225/condoapp/fetchDataParcel.php";
+    String url1 = "http://192.168.43.225/condoapp/deleteParcel.php";
     Parcel parcel;
 
     @Override
@@ -72,7 +73,7 @@ public class ParcelListView extends AppCompatActivity {
                                         .putExtra("position",position));
                                 break;
                             case 2:
-                                //deleteData(parcelArrayList.get(position).getParcelID());
+                                deleteData(parcelArrayList.get(position).getParcelID());
 
                                 break;
                         }
@@ -153,5 +154,45 @@ public class ParcelListView extends AppCompatActivity {
         requestQueue.add(request);
     }
 
+    private void deleteData(final String parcelID) {
+
+        StringRequest request = new StringRequest(Request.Method.POST, url1,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        if(response.equalsIgnoreCase("Data Deleted")){
+                            Toast.makeText(ParcelListView.this, "Data Deleted Successfully",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(ParcelListView.this, "Data Not Deleted",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(ParcelListView.this, error.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("parcelID", parcelID);
+
+
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(request);
+
+        Intent intent = new Intent(ParcelListView.this, ParcelListView.class);
+        startActivity(intent);
+    }
 
 }

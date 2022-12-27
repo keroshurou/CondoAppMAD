@@ -11,7 +11,7 @@
     <string name="insCollectorName">Enter Recipient Name</string>
     <string name="insParcelUnit">Enter Unit Number</string>
     <string name="insExpressBrand">Enter Express Brand (Courier) </string>
-    <string name="insTrackingNumber">Enter TrackingNumber</string>
+    <string name="insTrackingNumber">Enter Tracking Number</string>
     <string name="insDeliveredDate">Enter Delivered Date</string>
     <string name="insCollectStatus">Enter Collect Status</string>
     <string name="insCollectedDate">Enter Collected Date</string>
