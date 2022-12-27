@@ -163,7 +163,7 @@
         android:id="@+id/edtUpCollectedDate"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
@@ -172,6 +172,7 @@
         android:padding="10dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedStatus" />
 
