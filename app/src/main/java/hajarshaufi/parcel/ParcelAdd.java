@@ -2,12 +2,15 @@ package hajarshaufi.parcel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -22,6 +25,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,10 +39,12 @@ public class ParcelAdd extends AppCompatActivity {
     Button submitAddParcel;
     ImageButton btnBack;
     private String collectorName, parcelUnit, expressBrand, trackingNumber,
-            deliveredDate, collectStatus;
+            deliveredDate, collectStatus, collectedDate;
     private int managementID;
+    private DatePickerDialog datePicker;
 
     String availableStatus = "Available";
+    //String noDate = "Null";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +69,8 @@ public class ParcelAdd extends AppCompatActivity {
 
                 getParcel();
 
-                Intent intentSuccess = new Intent(ParcelAdd.this, ParcelAddSuccess.class);
+                Intent intentSuccess = new Intent(ParcelAdd.this,
+                        ParcelAddSuccess.class);
                 startActivity(intentSuccess);
             }
         });
@@ -73,6 +81,38 @@ public class ParcelAdd extends AppCompatActivity {
 
                 Intent intentBack = new Intent(ParcelAdd.this, ParcelManagementMain.class);
                 startActivity(intentBack);
+            }
+        });
+
+        deliveredDateEdt.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction() == MotionEvent.ACTION_UP){
+                    //Initialize variable
+                    final Calendar cldr = Calendar.getInstance();
+
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    String date = simpleDateFormat.format(cldr.getTime());
+
+                    //Get day, month, year
+                    int day = cldr.get(Calendar.DAY_OF_MONTH);
+                    int month = cldr.get(Calendar.MONTH);
+                    int year = cldr.get(Calendar.YEAR);
+
+                    // date picker dialog
+                    datePicker = new DatePickerDialog(ParcelAdd.this,
+                            new DatePickerDialog.OnDateSetListener() {
+                                @Override
+                                public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                                      int dayOfMonth) {
+                                    deliveredDateEdt.setText(year  + "-" + (monthOfYear + 1)
+                                            + "-" + dayOfMonth);
+                                }
+                            }, year,month, day);
+                    datePicker.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    datePicker.show();
+                }
+                return false;
             }
         });
     }
@@ -86,6 +126,7 @@ public class ParcelAdd extends AppCompatActivity {
         trackingNumber = trackingNumberEdt.getText().toString();
         deliveredDate = deliveredDateEdt.getText().toString();
         collectStatus = availableStatus;
+        //collectedDate = noDate;
         /**collectStatus = collectStatusEdt.getText().toString();
         collectedDate = collectedDateEdt.getText().toString();**/
 
@@ -114,7 +155,7 @@ public class ParcelAdd extends AppCompatActivity {
                                    String collectStatus) {
 
         // url to post our data
-        String url = "http://192.168.56.101/condoapp/addParcel.php";
+        String url = "http://10.131.77.103/condoapp/addParcel.php";
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(ParcelAdd.this);
@@ -141,8 +182,8 @@ public class ParcelAdd extends AppCompatActivity {
                 expressBrandEdt.setText("");
                 trackingNumberEdt.setText("");
                 deliveredDateEdt.setText("");
-                collectStatusEdt.setText("");
-                collectedDateEdt.setText("");
+                //collectStatusEdt.setText("");
+                //collectedDateEdt.setText("");
             }
         }, new com.android.volley.Response.ErrorListener() {
             @Override

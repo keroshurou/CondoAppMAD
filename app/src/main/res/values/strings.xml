@@ -30,6 +30,7 @@
     <string name="editCollectStatus">Enter Collect Status</string>
     <string name="editCollectedDate">Enter Collected Date</string>
     <string name="editManagementID">Enter Management ID</string>
+    <string name="editParcelID">Parcel ID</string>
 
     <!-- Activity View/Report Parcel. -->
     <string name="insReport">Parcel Information</string>
