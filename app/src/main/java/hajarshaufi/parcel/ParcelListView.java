@@ -36,7 +36,7 @@ public class ParcelListView extends AppCompatActivity {
     ListView listView;
     ParcelAdapter parcelAdapter;
     public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
-    String url = "http://10.131.77.103/condoapp/fetchDataParcel.php";
+    String url = "http://192.168.43.225/condoapp/fetchDataParcel.php";
     Parcel parcel;
 
     @Override
@@ -102,43 +102,6 @@ public class ParcelListView extends AppCompatActivity {
         getData();
     }
 
-    /**private void deleteData(final String facilityID) {
-
-        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.1.9/delete_facility.php",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-
-                        if(response.equalsIgnoreCase("Data Deleted")){
-                            Toast.makeText(ParcelListView.this, "Data Deleted Successfully",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-                            Toast.makeText(ParcelListView.this, "Data Not Deleted",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(ParcelListView.this, error.getMessage(),Toast.LENGTH_SHORT).show();
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-
-                Map<String, String> params = new HashMap<String, String>();
-
-                params.put("parcelID", parcelID);
-
-                return params;
-            }
-        };
-
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(request);
-    }**/
-
     public void getData() {
 
         StringRequest request = new StringRequest(Request.Method.POST, url,
@@ -159,7 +122,6 @@ public class ParcelListView extends AppCompatActivity {
                             JSONObject object = jsonArray.getJSONObject(i);
 
                             String parcelID = object.getString("parcelID");
-                            //String managementID = object.getString("managementID");
                             String collectorName = object.getString("collectorName");
                             String parcelUnit = object.getString("parcelUnit");
                             String expressBrand = object.getString("expressBrand");
@@ -168,7 +130,7 @@ public class ParcelListView extends AppCompatActivity {
                             String collectStatus = object.getString("collectStatus");
                             String collectedDate = object.getString("collectedDate");
 
-                            parcel = new Parcel(parcelID,collectorName, parcelUnit, expressBrand,
+                            parcel = new Parcel(parcelID, collectorName, parcelUnit, expressBrand,
                                     trackingNumber, deliveredDate, collectStatus, collectedDate );
                             parcelArrayList.add(parcel);
                             parcelAdapter.notifyDataSetChanged();

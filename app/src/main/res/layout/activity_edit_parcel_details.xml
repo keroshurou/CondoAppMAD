@@ -13,20 +13,24 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/back_button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/editParcelInfo"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:text="@string/insPTextEdit"
-        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="22sp"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,21 +51,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editParcelInfo" />
 
-    <EditText
-        android:id="@+id/edtUpManagementID"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/white_column"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/editManagementID"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpParcelID" />
 
     <EditText
         android:id="@+id/edtUpTrackingNumber"
@@ -165,6 +154,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/black_btn"
+        android:onClick="fnUpdate"
         android:text="Update"
         android:textColor="#FDFCFC"
         android:textSize="16sp"
@@ -186,7 +176,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpManagementID" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpParcelID" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

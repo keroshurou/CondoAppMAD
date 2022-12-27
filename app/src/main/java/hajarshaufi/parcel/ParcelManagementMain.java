@@ -17,7 +17,6 @@ public class ParcelManagementMain extends AppCompatActivity {
         setContentView(R.layout.activity_parcel_management_main);
 
         insertParcelBtn = findViewById(R.id.insertParcelBtn);
-        editParcelBtn = findViewById(R.id.edtParcelBtn);
         parcelReportBtn = findViewById(R.id.parcelReportBtn);
 
         //intent to insert parcel
@@ -26,15 +25,6 @@ public class ParcelManagementMain extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentParcel = new Intent(ParcelManagementMain.this, ParcelAdd.class);
                 startActivity(intentParcel);
-            }
-        });
-
-        //intent to edit parcel
-        editParcelBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentEditParcel = new Intent(ParcelManagementMain.this, ParcelAdd.class);
-                startActivity(intentEditParcel);
             }
         });
 

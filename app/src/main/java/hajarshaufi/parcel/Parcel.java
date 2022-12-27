@@ -3,7 +3,6 @@ package hajarshaufi.parcel;
 public class Parcel {
 
     private String parcelID;
-    //private String managementID;
     private String collectorName;
     private String parcelUnit;
     private String expressBrand;
@@ -19,14 +18,6 @@ public class Parcel {
     public void setParcelID(String parcelID) {
         this.parcelID = parcelID;
     }
-
-    /**public String getManagementID() {
-        return managementID;
-    }
-
-    public void setManagementID(String managementID) {
-        this.managementID = managementID;
-    }**/
 
     public String getCollectorName() {
         return collectorName;
@@ -84,11 +75,10 @@ public class Parcel {
         this.collectedDate = collectedDate;
     }
 
-    public Parcel(String parcelID /**String managementID**/, String collectorName, String parcelUnit,
+    public Parcel(String parcelID, String collectorName, String parcelUnit,
                   String expressBrand, String trackingNumber, String deliveredDate,
                   String collectStatus, String collectedDate) {
         this.parcelID = parcelID;
-        //this.managementID = managementID;
         this.collectorName = collectorName;
         this.parcelUnit = parcelUnit;
         this.expressBrand = expressBrand;

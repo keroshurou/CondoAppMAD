@@ -33,18 +33,18 @@ import java.util.Map;
 public class ParcelAdd extends AppCompatActivity {
 
     //Declare EditText & Button
-    private EditText managementIDEdt, collectorNameEdt, parcelUnitEdt, expressBrandEdt, trackingNumberEdt,
-            deliveredDateEdt, collectStatusEdt, collectedDateEdt;
+    private EditText collectorNameEdt, parcelUnitEdt, expressBrandEdt, trackingNumberEdt,
+            deliveredDateEdt;
 
     Button submitAddParcel;
     ImageButton btnBack;
+
     private String collectorName, parcelUnit, expressBrand, trackingNumber,
-            deliveredDate, collectStatus, collectedDate;
-    private int managementID;
+            deliveredDate, collectStatus;
+
     private DatePickerDialog datePicker;
 
     String availableStatus = "Available";
-    //String noDate = "Null";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,14 +52,12 @@ public class ParcelAdd extends AppCompatActivity {
         setContentView(R.layout.activity_parcel_add);
 
         //Get all IDs
-        managementIDEdt = findViewById(R.id.edtMangID);
         collectorNameEdt = findViewById(R.id.edtCollectorName);
         parcelUnitEdt = findViewById(R.id.edtUnitNumber);
         expressBrandEdt = findViewById(R.id.edtExpressBrand);
         trackingNumberEdt = findViewById(R.id.edtTrackingNumber);
         deliveredDateEdt = findViewById(R.id.edtDeliveredDate);
-        /**collectStatusEdt = findViewById(R.id.edtCollectStatus);
-        collectedDateEdt = findViewById(R.id.edtCollectedDate);**/
+
         submitAddParcel = findViewById(R.id.addBtn);
         btnBack = findViewById(R.id.btnBack);
 
@@ -119,16 +117,12 @@ public class ParcelAdd extends AppCompatActivity {
 
     public void getParcel(){
 
-        managementID = Integer.parseInt(managementIDEdt.getText().toString());
         collectorName = collectorNameEdt.getText().toString();
         parcelUnit = parcelUnitEdt.getText().toString();
         expressBrand = expressBrandEdt.getText().toString();
         trackingNumber = trackingNumberEdt.getText().toString();
         deliveredDate = deliveredDateEdt.getText().toString();
         collectStatus = availableStatus;
-        //collectedDate = noDate;
-        /**collectStatus = collectStatusEdt.getText().toString();
-        collectedDate = collectedDateEdt.getText().toString();**/
 
         if (TextUtils.isEmpty(collectorName)){
             collectorNameEdt.setError("Please enter Collector Name");
@@ -140,22 +134,18 @@ public class ParcelAdd extends AppCompatActivity {
             trackingNumberEdt.setError("Please enter Tracking Number");
         } else if(TextUtils.isEmpty(deliveredDate)) {
             deliveredDateEdt.setError("Please enter Delivered Date");
-        } /**else if(TextUtils.isEmpty(collectStatus)) {
-            collectStatusEdt.setError("Please enter Collect Status");
-        } else if(TextUtils.isEmpty(collectedDate)) {
-            collectedDateEdt.setError("Please enter Collected Date");
-        } **/else {
-            addDataToDatabase(Integer.parseInt(String.valueOf(managementID)), collectorName, parcelUnit, expressBrand, trackingNumber,
+        } else {
+            addDataToDatabase(collectorName, parcelUnit, expressBrand, trackingNumber,
                     deliveredDate, collectStatus);
         }
     }
 
-    private void addDataToDatabase(int managementID, String collectorName, String parcelUnit, String expressBrand,
+    private void addDataToDatabase(String collectorName, String parcelUnit, String expressBrand,
                                    String trackingNumber, String deliveredDate,
                                    String collectStatus) {
 
         // url to post our data
-        String url = "http://10.131.77.103/condoapp/addParcel.php";
+        String url = "http://192.168.43.225/condoapp/insertParcel.php";
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(ParcelAdd.this);
@@ -176,14 +166,11 @@ public class ParcelAdd extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 // and setting data to edit text as empty
-                managementIDEdt.setText("");
                 collectorNameEdt.setText("");
                 parcelUnitEdt.setText("");
                 expressBrandEdt.setText("");
                 trackingNumberEdt.setText("");
                 deliveredDateEdt.setText("");
-                //collectStatusEdt.setText("");
-                //collectedDateEdt.setText("");
             }
         }, new com.android.volley.Response.ErrorListener() {
             @Override
@@ -207,14 +194,12 @@ public class ParcelAdd extends AppCompatActivity {
 
                 // on below line we are passing our
                 // key and value pair to our parameters.
-                params.put("managementID", String.valueOf(managementID));
                 params.put("collectorName", collectorName);
                 params.put("parcelUnit", parcelUnit);
                 params.put("expressBrand", expressBrand);
                 params.put("trackingNumber", trackingNumber);
                 params.put("deliveredDate", deliveredDate);
                 params.put("collectStatus", collectStatus);
-                //params.put("collectedDate", collectedDate);
 
                 // at last we are returning our params.
                 return params;

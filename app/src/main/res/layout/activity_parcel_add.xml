@@ -49,22 +49,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/insParcelPage" />
 
-    <EditText
-        android:id="@+id/edtCollectorName"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/white_column"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/insCollectorName"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtMangID" />
-
     <!--
     <EditText
         android:id="@+id/edtCollectStatus"
@@ -93,6 +77,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtCollectStatus" />
 -->
+
+    <EditText
+        android:id="@+id/edtCollectorName"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/white_column"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/insCollectorName"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insParcelPage2" />
 
     <EditText
         android:id="@+id/edtUnitNumber"
@@ -174,21 +175,6 @@
         app:layout_constraintTop_toBottomOf="@+id/edtDeliveredDate"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/edtMangID"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/white_column"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/managementID"
-        android:inputType="number"
-        android:padding="10dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/insParcelPage2" />
 
     <ImageButton
         android:id="@+id/btnBack"

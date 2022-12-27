@@ -42,7 +42,9 @@ public class EditParcelDetails extends AppCompatActivity {
         setContentView(R.layout.activity_edit_parcel_details);
 
         btnBack = findViewById(R.id.btnBack);
-        edtUpManagementID = findViewById(R.id.edtUpManagementID);
+
+        edtParcelID = findViewById(R.id.edtUpParcelID);
+        //edtUpManagementID = findViewById(R.id.edtUpManagementID);
         edtUpCollectorName = findViewById(R.id.edtUpCollectorName);
         edtUpUnitNumber = findViewById(R.id.edtUpUnitNumber);
         edtUpTrackingNumber = findViewById(R.id.edtUpTrackingNumber);
@@ -55,14 +57,13 @@ public class EditParcelDetails extends AppCompatActivity {
         position = intent.getExtras().getInt("position");
 
         edtParcelID.setText(ParcelListView.parcelArrayList.get(position).getParcelID());
-        edtUpManagementID.setText(ParcelListView.parcelArrayList.get(position).getParcelID());
         edtUpCollectorName.setText(ParcelListView.parcelArrayList.get(position).getCollectorName());
         edtUpUnitNumber.setText(ParcelListView.parcelArrayList.get(position).getParcelUnit());
         edtUpTrackingNumber.setText(ParcelListView.parcelArrayList.get(position).getTrackingNumber());
         edtUpExpressBrand.setText(ParcelListView.parcelArrayList.get(position).getExpressBrand());
         edtUpDeliveredDate.setText(ParcelListView.parcelArrayList.get(position).getDeliveredDate());
         edtUpCollectedStatus.setText(ParcelListView.parcelArrayList.get(position).getCollectStatus());
-        edtUpDeliveredDate.setText(ParcelListView.parcelArrayList.get(position).getCollectedDate());
+        edtUpCollectedDate.setText(ParcelListView.parcelArrayList.get(position).getCollectedDate());
 
         edtUpDeliveredDate.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -141,19 +142,16 @@ public class EditParcelDetails extends AppCompatActivity {
     public void fnUpdate(View view){
 
         final String parcelID = edtParcelID.getText().toString().trim();
-        final String managementID = edtUpManagementID.getText().toString().trim();
         final String collectorName = edtUpCollectorName.getText().toString().trim();
         final String unitNumber = edtUpUnitNumber.getText().toString().trim();
         final String trackingNumber = edtUpTrackingNumber.getText().toString().trim();
         final String expressBrand = edtUpExpressBrand.getText().toString().trim();
         final String deliveredDate = edtUpDeliveredDate.getText().toString().trim();
         final String collectStatus = edtUpCollectedStatus.getText().toString().trim();
-        final String collectedDate = edtUpCollectedStatus.getText().toString().trim();
+        final String collectedDate = edtUpCollectedDate.getText().toString().trim();
 
         // Give a warning to user when the field is empty
-        if(TextUtils.isEmpty(managementID)){
-            edtUpManagementID.setError("Please enter Management ID");
-        } else if(TextUtils.isEmpty(collectorName)){
+        if(TextUtils.isEmpty(collectorName)){
             edtUpCollectorName.setError("Please enter Collector Name");
         } else if(TextUtils.isEmpty(unitNumber)){
             edtUpUnitNumber.setError("Please enter House Unit Number");
@@ -166,7 +164,7 @@ public class EditParcelDetails extends AppCompatActivity {
         } else if(TextUtils.isEmpty(collectStatus)) {
             edtUpCollectedStatus.setError("Please enter Collect Status");
          } else if(TextUtils.isEmpty(collectedDate)) {
-            edtUpCollectedStatus.setError("Please enter Collected Date");
+            edtUpCollectedDate.setError("Please enter Collected Date");
          } else {
             Intent intentSuccess = new Intent(EditParcelDetails.this, SuccessfullyUpdatedParcel.class);
             startActivity(intentSuccess);
@@ -176,7 +174,7 @@ public class EditParcelDetails extends AppCompatActivity {
         progressDialog.setMessage("Updating....");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://10.131.77.103/condoapp/updateParcel.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.225/condoapp/updateParcel.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -200,7 +198,6 @@ public class EditParcelDetails extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
 
                 params.put("parcelID", parcelID);
-                params.put("managementID", String.valueOf(managementID));
                 params.put("collectorName", collectorName);
                 params.put("parcelUnit", unitNumber);
                 params.put("expressBrand", expressBrand);

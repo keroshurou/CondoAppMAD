@@ -27,7 +27,8 @@ public class DetailParcel extends AppCompatActivity {
         txtDeliveredDate = findViewById(R.id.txtDeliveredDate);
         txtCollectStatus = findViewById(R.id.txtCollectStatus);
         txtCollectedDate = findViewById(R.id.txtCollectedDate);
-        btnBack = (ImageButton)findViewById(R.id.btnBack);
+
+        btnBack = findViewById(R.id.btnBack);
 
         //Intent to Facilities List
         btnBack = (ImageButton) findViewById(R.id.btnBack);
