@@ -62,7 +62,7 @@ public class ParcelAdd extends AppCompatActivity {
 
                 getParcel();
 
-                Intent intentSuccess = new Intent(ParcelAdd.this, ParcelSuccess.class);
+                Intent intentSuccess = new Intent(ParcelAdd.this, ParcelAddSuccess.class);
                 startActivity(intentSuccess);
             }
         });

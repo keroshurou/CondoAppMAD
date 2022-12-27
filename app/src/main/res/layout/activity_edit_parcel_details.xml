@@ -12,6 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/building" />
 
     <ImageButton
@@ -19,8 +25,12 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/back_button"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/editParcelInfo"
@@ -48,8 +58,9 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/editParcelInfo"
-        tools:layout_editor_absoluteX="46dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editParcelInfo" />
 
     <EditText
         android:id="@+id/edtUpCollectorName"
@@ -63,8 +74,9 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpManagementID"
-        tools:layout_editor_absoluteX="46dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpManagementID" />
 
     <EditText
         android:id="@+id/edtUpUnitNumber"
@@ -78,8 +90,9 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectorName"
-        tools:layout_editor_absoluteX="46dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectorName" />
 
     <EditText
         android:id="@+id/edtUpExpressBrand"
@@ -110,8 +123,9 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpUnitNumber"
-        tools:layout_editor_absoluteX="46dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpUnitNumber" />
 
     <EditText
         android:id="@+id/edtUpDeliveredDate"
@@ -141,8 +155,9 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpDeliveredDate"
-        tools:layout_editor_absoluteX="46dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpDeliveredDate" />
 
     <EditText
         android:id="@+id/edtUpCollectedDate"
@@ -156,8 +171,9 @@
         android:inputType="date"
         android:padding="10dp"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedStatus"
-        tools:layout_editor_absoluteX="46dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedStatus" />
 
     <Button
         android:id="@+id/btnUpdate"
@@ -168,9 +184,12 @@
         android:text="Update"
         android:textColor="#FDFCFC"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedDate" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedDate"
+        app:layout_constraintVertical_bias="0.142" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
