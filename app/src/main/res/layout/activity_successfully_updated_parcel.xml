@@ -9,15 +9,15 @@
 
     <ImageView
         android:id="@+id/imageViewBuilding"
-        android:layout_width="414dp"
-        android:layout_height="734dp"
+        android:layout_width="363dp"
+        android:layout_height="763dp"
         android:scaleType="fitEnd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.333"
         app:srcCompat="@drawable/building" />
 
     <Button

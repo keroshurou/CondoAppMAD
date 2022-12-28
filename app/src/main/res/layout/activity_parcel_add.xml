@@ -99,22 +99,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtUnitNumber" />
 
-    <EditText
-        android:id="@+id/edtExpressBrand"
+    <Spinner
+        android:id="@+id/courierSpinner"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/insExpressBrand"
-        android:inputType="textPersonName"
+        android:gravity="center"
         android:padding="10dp"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTrackingNumber" />
-
+        app:layout_constraintTop_toBottomOf="@+id/txtViewCourier" />
 
     <EditText
         android:id="@+id/edtDeliveredDate"
@@ -129,8 +126,10 @@
         android:padding="10dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtExpressBrand" />
+        app:layout_constraintTop_toBottomOf="@+id/courierSpinner" />
+
 
     <Button
         android:id="@+id/addBtn"
@@ -147,7 +146,6 @@
         app:layout_constraintTop_toBottomOf="@+id/edtDeliveredDate"
         app:layout_constraintVertical_bias="0.0" />
 
-
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="50dp"
@@ -159,6 +157,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/txtViewCourier"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:elevation="10dp"
+        android:text="   Enter Express Brand (Courier):"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTrackingNumber" />
+
+
+    <!--
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="162dp"
+        android:hint="Enter Express Brand (Courier)"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/courierSpinner"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:inputType="none"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="590dp">
+
+        </AutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>-->
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

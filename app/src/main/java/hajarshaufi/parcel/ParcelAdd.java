@@ -9,10 +9,13 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -30,7 +33,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ParcelAdd extends AppCompatActivity {
+public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     //Declare EditText & Button
     private EditText collectorNameEdt, parcelUnitEdt, expressBrandEdt, trackingNumberEdt,
@@ -43,6 +46,7 @@ public class ParcelAdd extends AppCompatActivity {
             deliveredDate, collectStatus;
 
     private DatePickerDialog datePicker;
+    private Spinner courierSpinner;
 
     String availableStatus = "Available";
 
@@ -55,9 +59,9 @@ public class ParcelAdd extends AppCompatActivity {
         collectorNameEdt = findViewById(R.id.edtCollectorName);
         parcelUnitEdt = findViewById(R.id.edtUnitNumber);
         trackingNumberEdt = findViewById(R.id.edtTrackingNumber);
-        expressBrandEdt = findViewById(R.id.edtExpressBrand);
         deliveredDateEdt = findViewById(R.id.edtDeliveredDate);
 
+        courierSpinner = findViewById(R.id.courierSpinner);
         submitAddParcel = findViewById(R.id.addBtn);
         btnBack = findViewById(R.id.btnBack);
 
@@ -113,6 +117,14 @@ public class ParcelAdd extends AppCompatActivity {
                 return false;
             }
         });
+
+        ArrayAdapter<CharSequence> courierAdapter = ArrayAdapter.createFromResource(ParcelAdd.this,
+                R.array.courier, android.R.layout.simple_spinner_item);
+        courierAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        courierSpinner.setAdapter(courierAdapter);
+
+        courierSpinner.setOnItemSelectedListener(this);
+
     }
 
     public void getParcel(){
@@ -120,7 +132,7 @@ public class ParcelAdd extends AppCompatActivity {
         collectorName = collectorNameEdt.getText().toString();
         parcelUnit = parcelUnitEdt.getText().toString();
         trackingNumber = trackingNumberEdt.getText().toString();
-        expressBrand = expressBrandEdt.getText().toString();
+        expressBrand = courierSpinner.getSelectedItem().toString().trim();
         deliveredDate = deliveredDateEdt.getText().toString();
         collectStatus = availableStatus;
 
@@ -128,9 +140,9 @@ public class ParcelAdd extends AppCompatActivity {
             collectorNameEdt.setError("Please enter Collector Name");
         } else if(TextUtils.isEmpty(parcelUnit)){
             parcelUnitEdt.setError("Please enter House Unit Number");
-        } else if(TextUtils.isEmpty(expressBrand)) {
+        } /**else if(TextUtils.isEmpty(expressBrand)) {
             expressBrandEdt.setError("Please enter Express Brand (Courier Service)");
-        } else if(TextUtils.isEmpty(trackingNumber)) {
+        } **/else if(TextUtils.isEmpty(trackingNumber)) {
             trackingNumberEdt.setError("Please enter Tracking Number");
         } else if(TextUtils.isEmpty(deliveredDate)) {
             deliveredDateEdt.setError("Please enter Delivered Date");
@@ -210,4 +222,15 @@ public class ParcelAdd extends AppCompatActivity {
         queue.add(request);
     }
 
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        expressBrand = adapterView.getItemAtPosition(i).toString();
+        //Toast.makeText(getApplicationContext(), choice, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 }

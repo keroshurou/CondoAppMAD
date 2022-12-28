@@ -27,8 +27,8 @@
 
     <ImageButton
         android:id="@+id/btnBack"
-        android:layout_width="49dp"
-        android:layout_height="87dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_above="@id/txtID"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="false"
@@ -46,14 +46,13 @@
 
     <TextView
         android:id="@+id/detailParcel"
-        android:layout_width="297dp"
-        android:layout_height="47dp"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="18dp"
-
         android:text="Details of Facility"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="22sp"
@@ -65,7 +64,7 @@
 
     <TextView
         android:id="@+id/txtID"
-        android:layout_width="359dp"
+        android:layout_width="320dp"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_below="@id/detailParcel"
@@ -79,7 +78,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="359dp"
+        android:layout_width="320dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtID"
@@ -93,7 +92,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="359dp"
+        android:layout_width="320dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtName"
@@ -107,7 +106,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="359dp"
+        android:layout_width="320dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@+id/txtParcelUnit"
@@ -121,7 +120,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="359dp"
+        android:layout_width="320dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtTrackingNumber"
@@ -135,7 +134,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="359dp"
+        android:layout_width="320dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtExpressBrand"
@@ -149,7 +148,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="359dp"
+        android:layout_width="320dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtDeliveredDate"
@@ -163,7 +162,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="359dp"
+        android:layout_width="320dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtCollectStatus"

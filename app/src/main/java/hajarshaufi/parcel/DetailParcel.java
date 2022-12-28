@@ -30,7 +30,7 @@ public class DetailParcel extends AppCompatActivity {
 
         btnBack = findViewById(R.id.btnBack);
 
-        //Intent to Facilities List
+        //Intent to Parcel List
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -39,4 +39,24 @@
     <!-- Layout parcel_item.xml -->
     <string name="txt">Tracking Number</string>
     <string name="collectorName">CollectorName</string>
+
+    <!-- String array courier type -->
+    <string-array name="courier">
+        <item>Ninja Van</item>
+        <item>J&amp;T Express</item>
+        <item>DHL Ecommerce</item>
+        <item>Shopee Express</item>
+        <item>Pos Malaysia</item>
+        <item>Citylink Express</item>
+        <item>Lazada</item>
+        <item>GD Express</item>
+        <item>Skynet Express</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- String array collect status -->
+    <string-array name="collectStatus">
+        <item>Available</item>
+        <item>Collected</item>
+    </string-array>
 </resources>

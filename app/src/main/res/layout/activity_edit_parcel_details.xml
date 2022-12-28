@@ -131,7 +131,7 @@
     <EditText
         android:id="@+id/edtUpCollectedDate"
         android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
@@ -147,7 +147,7 @@
     <EditText
         android:id="@+id/edtUpDeliveredDate"
         android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
