@@ -13,7 +13,6 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -26,38 +25,34 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
-public class ParcelListView extends AppCompatActivity {
+public class ResidentParcelListView extends AppCompatActivity {
 
     ImageButton btnBack;
 
-    ListView listView;
-    ParcelAdapter parcelAdapter;
-    public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
+    ListView residentListView;
+    ParcelAdapter residentParcelAdapter;
+    public static ArrayList<Parcel> residentParcelArrayList = new ArrayList<>();
     String url = "http://192.168.43.225/condoapp/fetchDataParcel.php";
-    String url1 = "http://192.168.43.225/condoapp/deleteParcel.php";
     Parcel parcel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parcel_list_view);
+        setContentView(R.layout.activity_resident_parcel_list_view);
 
-        listView = findViewById(R.id.parcelListView);
-        parcelAdapter = new ParcelAdapter(this, parcelArrayList);
-        listView.setAdapter(parcelAdapter);
+        residentListView = findViewById(R.id.residentParcelListView);
+        residentParcelAdapter = new ParcelAdapter(this, residentParcelArrayList);
+        residentListView.setAdapter(residentParcelAdapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        residentListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int position, long parcelID) {
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 ProgressDialog progressDialog = new ProgressDialog(view.getContext());
 
-                CharSequence[] dialogItem = {"View Parcel","Edit Parcel","Delete Parcel"};
-                builder.setTitle(parcelArrayList.get(position).getTrackingNumber());
+                CharSequence[] dialogItem = {"View Parcel"};
+                builder.setTitle(residentParcelArrayList.get(position).getTrackingNumber());
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
@@ -65,17 +60,8 @@ public class ParcelListView extends AppCompatActivity {
                         switch (i){
 
                             case 0:
-                                startActivity(new Intent(getApplicationContext(),DetailParcel.class)
+                                startActivity(new Intent(getApplicationContext(),ResidentDetailParcel.class)
                                         .putExtra("position",position));
-                                break;
-                            case 1:
-                                startActivity(new Intent(getApplicationContext(),EditParcelDetails.class)
-                                        .putExtra("position",position));
-                                break;
-                            case 2:
-                                startActivity(new Intent(getApplicationContext(),DeleteParcel.class)
-                                        .putExtra("position",position));
-                                //deleteData(parcelArrayList.get(position).getParcelID());
                                 break;
                         }
 
@@ -95,7 +81,7 @@ public class ParcelListView extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentBack = new Intent(ParcelListView.this,
+                Intent intentBack = new Intent(ResidentParcelListView.this,
                         ParcelManagementMain.class);
                 startActivity(intentBack);
             }
@@ -111,7 +97,7 @@ public class ParcelListView extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
-                parcelArrayList.clear();
+                residentParcelArrayList.clear();
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     String success = jsonObject.getString("success");
@@ -134,8 +120,8 @@ public class ParcelListView extends AppCompatActivity {
 
                             parcel = new Parcel(parcelID, collectorName, parcelUnit, expressBrand,
                                     trackingNumber, deliveredDate, collectStatus, collectedDate );
-                            parcelArrayList.add(parcel);
-                            parcelAdapter.notifyDataSetChanged();
+                            residentParcelArrayList.add(parcel);
+                            residentParcelAdapter.notifyDataSetChanged();
                         }
                     }
 
@@ -148,52 +134,11 @@ public class ParcelListView extends AppCompatActivity {
             }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(ParcelListView.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResidentParcelListView.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-        RequestQueue requestQueue = Volley.newRequestQueue(ParcelListView.this);
+        RequestQueue requestQueue = Volley.newRequestQueue(ResidentParcelListView.this);
         requestQueue.add(request);
     }
-
-    private void deleteData(final String parcelID) {
-
-        StringRequest request = new StringRequest(Request.Method.POST, url1,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-
-                        if(response.equalsIgnoreCase("Data Deleted")){
-                            Toast.makeText(ParcelListView.this, "Data Deleted Successfully",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-                            Toast.makeText(ParcelListView.this, "Data Not Deleted",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(ParcelListView.this, error.getMessage(),Toast.LENGTH_SHORT).show();
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-
-                Map<String, String> params = new HashMap<String, String>();
-
-                params.put("parcelID", parcelID);
-
-
-                return params;
-            }
-        };
-
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(request);
-
-        Intent intent = new Intent(ParcelListView.this, ParcelListView.class);
-        startActivity(intent);
-    }
-
 }
+
