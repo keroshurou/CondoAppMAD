@@ -220,6 +220,9 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
         // below line is to make
         // a json object request.
         queue.add(request);
+
+        Intent intentSuccess = new Intent(this, ParcelAddSuccess.class);
+        startActivity(intentSuccess);
     }
 
 
