@@ -171,31 +171,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtTrackingNumber" />
 
-
-    <!--
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="162dp"
-        android:hint="Enter Express Brand (Courier)"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        >
-
-        <AutoCompleteTextView
-            android:id="@+id/courierSpinner"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:inputType="none"
-            tools:layout_editor_absoluteX="48dp"
-            tools:layout_editor_absoluteY="590dp">
-
-        </AutoCompleteTextView>
-
-    </com.google.android.material.textfield.TextInputLayout>-->
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

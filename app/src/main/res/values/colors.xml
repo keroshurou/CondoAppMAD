@@ -14,6 +14,10 @@
 
     <color name="text_color">#FDFCFC</color>
     <color name="background_color">#E6EEF4</color>
+    <color name="title_colour">#5E788C</color>
+    <color name="tab_color">#6A7F8F</color>
     <color name="green">#008000</color>
     <color name="red">#FF0000</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="gainsboro">#DCDCDC</color>
 </resources>

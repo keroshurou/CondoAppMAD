@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".ParcelAddFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageBuilding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/building" />
+
+        <TextView
+            android:id="@+id/insParcelPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="@string/insPTextInsert"
+            android:textAllCaps="false"
+            android:textColor="#050505"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/insParcelPage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/insPText2Direction"
+            android:textAllCaps="false"
+            android:textColor="#050505"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insParcelPage" />
+
+        <EditText
+            android:id="@+id/edtCollectorName"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/white_column"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/insCollectorName"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insParcelPage2" />
+
+        <EditText
+            android:id="@+id/edtUnitNumber"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_column"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/insParcelUnit"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtCollectorName" />
+
+        <EditText
+            android:id="@+id/edtTrackingNumber"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_column"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/insTrackingNumber"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtUnitNumber" />
+
+        <Spinner
+            android:id="@+id/courierSpinner"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_column"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewCourier" />
+
+
+        <EditText
+            android:id="@+id/edtDeliveredDate"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_column"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/insDeliveredDate"
+            android:inputType="date"
+            android:padding="10dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courierSpinner" />
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/black_btn"
+            android:text="@string/add"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtDeliveredDate"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txtViewCourier"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:elevation="10dp"
+            android:text="   Enter Express Brand (Courier):"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTrackingNumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

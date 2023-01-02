@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class ParcelManagementMain extends AppCompatActivity {
 
-    Button insertParcelBtn, editParcelBtn, parcelReportBtn;
+    Button insertParcelBtn, parcelReportBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
