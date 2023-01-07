@@ -9,9 +9,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,15 +31,15 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EditParcelDetails extends AppCompatActivity {
+public class EditParcelDetails extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     ImageButton btnBack;
-    EditText edtUpCollectorName, edtUpUnitNumber, edtUpTrackingNumber, edtUpExpressBrand,
-            edtUpDeliveredDate, edtUpCollectedStatus, edtUpCollectedDate;
-    TextView edtParcelID;
+    EditText edtUpCollectorName, edtUpUnitNumber, edtUpTrackingNumber, edtUpDeliveredDate, edtUpCollectedDate;
+    TextView edtParcelID, textViewCourier, textViewStatus;
 
     private int position;
     private DatePickerDialog datePicker;
+    private Spinner courierSpinner, statusSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +52,25 @@ public class EditParcelDetails extends AppCompatActivity {
         edtUpCollectorName = findViewById(R.id.edtUpCollectorName);
         edtUpUnitNumber = findViewById(R.id.edtUpUnitNumber);
         edtUpTrackingNumber = findViewById(R.id.edtUpTrackingNumber);
-        edtUpExpressBrand = findViewById(R.id.edtUpExpressBrand);
         edtUpDeliveredDate = findViewById(R.id.edtUpDeliveredDate);
-        edtUpCollectedStatus = findViewById(R.id.edtUpCollectedStatus);
         edtUpCollectedDate = findViewById(R.id.edtUpCollectedDate);
+        textViewCourier = findViewById(R.id.txtViewEmpty);
+        textViewStatus = findViewById(R.id.txtViewEmpty2);
+
+        courierSpinner = findViewById(R.id.courierSpinner);
+        ArrayAdapter<CharSequence> courierAdapter = ArrayAdapter.createFromResource(EditParcelDetails.this,
+                R.array.courier, android.R.layout.simple_spinner_item);
+        courierAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        courierSpinner.setAdapter(courierAdapter);
+        courierSpinner.setOnItemSelectedListener(this);
+
+        statusSpinner = findViewById(R.id.statusSpinner);
+        ArrayAdapter<CharSequence> statusAdapter = ArrayAdapter.createFromResource(EditParcelDetails.this,
+                R.array.collectStatus, android.R.layout.simple_spinner_item);
+        courierAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        courierSpinner.setAdapter(statusAdapter);
+        courierSpinner.setOnItemSelectedListener(this);
+
 
         Intent intent = getIntent();
         position = intent.getExtras().getInt("position");
@@ -61,9 +79,9 @@ public class EditParcelDetails extends AppCompatActivity {
         edtUpCollectorName.setText(ParcelListView.parcelArrayList.get(position).getCollectorName());
         edtUpUnitNumber.setText(ParcelListView.parcelArrayList.get(position).getParcelUnit());
         edtUpTrackingNumber.setText(ParcelListView.parcelArrayList.get(position).getTrackingNumber());
-        edtUpExpressBrand.setText(ParcelListView.parcelArrayList.get(position).getExpressBrand());
+        textViewCourier.setText(ParcelListView.parcelArrayList.get(position).getExpressBrand());
         edtUpDeliveredDate.setText(ParcelListView.parcelArrayList.get(position).getDeliveredDate());
-        edtUpCollectedStatus.setText(ParcelListView.parcelArrayList.get(position).getCollectStatus());
+        textViewStatus.setText(ParcelListView.parcelArrayList.get(position).getCollectStatus());
         edtUpCollectedDate.setText(ParcelListView.parcelArrayList.get(position).getCollectedDate());
 
         edtUpDeliveredDate.setOnTouchListener(new View.OnTouchListener() {
@@ -146,9 +164,9 @@ public class EditParcelDetails extends AppCompatActivity {
         final String collectorName = edtUpCollectorName.getText().toString().trim();
         final String unitNumber = edtUpUnitNumber.getText().toString().trim();
         final String trackingNumber = edtUpTrackingNumber.getText().toString().trim();
-        final String expressBrand = edtUpExpressBrand.getText().toString().trim();
+        final String expressBrand = courierSpinner.getSelectedItem().toString().trim();
         final String deliveredDate = edtUpDeliveredDate.getText().toString().trim();
-        final String collectStatus = edtUpCollectedStatus.getText().toString().trim();
+        final String collectStatus = statusSpinner.getSelectedItem().toString().trim();
         final String collectedDate = edtUpCollectedDate.getText().toString().trim();
 
         // Give a warning to user when the field is empty
@@ -156,15 +174,15 @@ public class EditParcelDetails extends AppCompatActivity {
             edtUpCollectorName.setError("Please enter Collector Name");
         } else if(TextUtils.isEmpty(unitNumber)){
             edtUpUnitNumber.setError("Please enter House Unit Number");
-        } else if(TextUtils.isEmpty(expressBrand)) {
+        } /**else if(TextUtils.isEmpty(expressBrand)) {
             edtUpExpressBrand.setError("Please enter Express Brand (Courier Service)");
-        } else if(TextUtils.isEmpty(trackingNumber)) {
+        } **/else if(TextUtils.isEmpty(trackingNumber)) {
             edtUpTrackingNumber.setError("Please enter Tracking Number");
         } else if(TextUtils.isEmpty(deliveredDate)) {
             edtUpDeliveredDate.setError("Please enter Delivered Date");
-        } else if(TextUtils.isEmpty(collectStatus)) {
-            edtUpCollectedStatus.setError("Please enter Collect Status");
-         } else if(TextUtils.isEmpty(collectedDate)) {
+        } /**else if(TextUtils.isEmpty(collectStatus)) {
+           edtUpCollectedStatus.setError("Please enter Collect Status");
+         } **/else if(TextUtils.isEmpty(collectedDate)) {
             edtUpCollectedDate.setError("Please enter Collected Date");
          } else {
             Intent intentSuccess = new Intent(EditParcelDetails.this, SuccessfullyUpdatedParcel.class);
@@ -212,5 +230,19 @@ public class EditParcelDetails extends AppCompatActivity {
         };
         RequestQueue requestQueue = Volley.newRequestQueue(EditParcelDetails.this);
         requestQueue.add(request);
+
+        Intent intent = new Intent(EditParcelDetails.this, SuccessfullyUpdatedParcel.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        //expressBrand = adapterView.getItemAtPosition(i).toString();
+        //Toast.makeText(getApplicationContext(), choice, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }

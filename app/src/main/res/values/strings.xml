@@ -42,6 +42,7 @@
 
     <!-- String array courier type -->
     <string-array name="courier">
+        <item> </item>
         <item>Ninja Van</item>
         <item>J&amp;T Express</item>
         <item>DHL Ecommerce</item>
@@ -56,9 +57,11 @@
 
     <!-- String array collect status -->
     <string-array name="collectStatus">
+        <item> </item>
         <item>Available</item>
         <item>Collected</item>
     </string-array>
+
     <string name="title_activity_parcel_main_navi">ParcelMainNavi</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>

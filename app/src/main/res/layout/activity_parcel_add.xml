@@ -52,7 +52,7 @@
     <EditText
         android:id="@+id/edtCollectorName"
         android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_height="38dp"
         android:layout_marginTop="56dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
@@ -69,7 +69,7 @@
     <EditText
         android:id="@+id/edtUnitNumber"
         android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_height="38dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
@@ -85,7 +85,7 @@
     <EditText
         android:id="@+id/edtTrackingNumber"
         android:layout_width="320dp"
-        android:layout_height="48dp"
+        android:layout_height="38dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
@@ -102,7 +102,7 @@
     <Spinner
         android:id="@+id/courierSpinner"
         android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_height="38dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
@@ -116,7 +116,7 @@
     <EditText
         android:id="@+id/edtDeliveredDate"
         android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_height="38dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"

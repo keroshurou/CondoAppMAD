@@ -113,6 +113,25 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
                             }, year,month, day);
                     datePicker.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                     datePicker.show();
+
+                    /***final Calendar cldr = Calendar.getInstance();
+                    int day = cldr.get(Calendar.DAY_OF_MONTH);
+                    int month = cldr.get(Calendar.MONTH);
+                    int year = cldr.get(Calendar.YEAR);
+
+                    int mHour = cldr.get(Calendar.HOUR_OF_DAY);
+                    int mMinute = cldr.get(Calendar.MINUTE);
+                    String strDay ="";
+                    // date picker dialog
+                    datePicker = new DatePickerDialog(StudentMainActivity.this,
+                            new DatePickerDialog.OnDateSetListener() {
+                                @Override
+                                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+                                    binding.edtBirthdate.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                                }
+                            }, year, month, day);
+                    datePicker.show();***/
                 }
                 return false;
             }
