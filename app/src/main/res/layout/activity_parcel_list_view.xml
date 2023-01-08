@@ -78,6 +78,7 @@
         app:layout_constraintVertical_bias="0.464" />
 
     <EditText
+        android:id="@+id/searchBar"
         android:layout_width="240dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -104,8 +105,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="94dp"
         android:layout_marginEnd="25dp"
-        android:scaleType="center"
         android:background="@drawable/white_column"
+        android:scaleType="center"
         app:srcCompat="@drawable/ic_baseline_search" />
 
 </RelativeLayout>

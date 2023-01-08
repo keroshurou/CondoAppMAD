@@ -7,8 +7,10 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -38,13 +40,16 @@ public class ParcelListView extends AppCompatActivity {
     public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
     String url = "http://192.168.43.225/condoapp/fetchDataParcel.php";
     String url1 = "http://192.168.43.225/condoapp/deleteParcel.php";
+    String url3 = "http://192.168.43.225/condoapp/searchParcel.php";
     Parcel parcel;
     ImageButton btnSearch;
+    EditText edtSearchBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parcel_list_view);
+
 
         listView = findViewById(R.id.parcelListView);
         parcelAdapter = new ParcelAdapter(this, parcelArrayList);
@@ -101,15 +106,21 @@ public class ParcelListView extends AppCompatActivity {
             }
         });
 
+        getData();
+
+        edtSearchBar = findViewById(R.id.searchBar);
         btnSearch = findViewById(R.id.imageButton);
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (TextUtils.isEmpty(edtSearchBar.getText().toString())) {
+                    Toast.makeText(ParcelListView.this, "Please enter course id", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                // calling method to load data.
+                getSearchData(edtSearchBar.getText().toString());
             }
         });
-
-        getData();
     }
 
     public void getData() {
@@ -159,6 +170,95 @@ public class ParcelListView extends AppCompatActivity {
                 Toast.makeText(ParcelListView.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+        RequestQueue requestQueue = Volley.newRequestQueue(ParcelListView.this);
+        requestQueue.add(request);
+    }
+
+    private void getSearchData(String collectorName) {
+
+        // url to post our data
+        String url = "http://localhost/courseApp/searchParcel.php";
+
+        // creating a new variable for our request queue
+        RequestQueue queue = Volley.newRequestQueue(ParcelListView.this);
+
+        // on below line we are calling a string
+        // request method to post the data to our API
+        // in this we are calling a post method.
+        StringRequest request = new StringRequest(Request.Method.POST, url3, new com.android.volley.Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    // on below line passing our response to json object.
+                    JSONObject jsonObject = new JSONObject(response);
+                    // on below line we are checking if the response is null or not.
+                    if (jsonObject.getString("collectorName") == null) {
+                        // displaying a toast message if we get error
+                        Toast.makeText(ParcelListView.this, "Please enter valid name.", Toast.LENGTH_SHORT).show();
+                    } else {
+                        parcelArrayList.clear();
+                        try {
+                            String success = jsonObject.getString("success");
+                            JSONArray jsonArray = jsonObject.getJSONArray("item");
+
+                            if(success.equals("1")){
+
+                                for(int i=0; i<jsonArray.length(); i++){
+
+                                    JSONObject object = jsonArray.getJSONObject(i);
+
+                                    String parcelID = object.getString("parcelID");
+                                    String collectorName = object.getString("collectorName");
+                                    String parcelUnit = object.getString("parcelUnit");
+                                    String expressBrand = object.getString("expressBrand");
+                                    String trackingNumber = object.getString("trackingNumber");
+                                    String deliveredDate = object.getString("deliveredDate");
+                                    String collectStatus = object.getString("collectStatus");
+                                    String collectedDate = object.getString("collectedDate");
+
+                                    parcel = new Parcel(parcelID, collectorName, parcelUnit, expressBrand,
+                                            trackingNumber, deliveredDate, collectStatus, collectedDate );
+                                    parcelArrayList.add(parcel);
+                                    parcelAdapter.notifyDataSetChanged();
+                                }
+                            }
+
+                        }
+                        catch (JSONException e){
+                            e.printStackTrace();
+                        }
+                    }
+                    // on below line we are displaying
+                    // a success toast message.
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new com.android.volley.Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // method to handle errors.
+                Toast.makeText(ParcelListView.this, "Fail to get parcel" + error, Toast.LENGTH_SHORT).show();
+            }
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+
+                // below line we are creating a map for storing our values in key and value pair.
+                Map<String, String> params = new HashMap<String, String>();
+
+                // on below line we are passing our key and value pair to our parameters.
+                params.put("collectorName", collectorName);
+
+                // at last we are returning our params.
+                return params;
+            }
+        };
+        // below line is to make
+        // a json object request.
+        queue.add(request);
+
         RequestQueue requestQueue = Volley.newRequestQueue(ParcelListView.this);
         requestQueue.add(request);
     }
