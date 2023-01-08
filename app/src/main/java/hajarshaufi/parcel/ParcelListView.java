@@ -39,6 +39,7 @@ public class ParcelListView extends AppCompatActivity {
     String url = "http://192.168.43.225/condoapp/fetchDataParcel.php";
     String url1 = "http://192.168.43.225/condoapp/deleteParcel.php";
     Parcel parcel;
+    ImageButton btnSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +90,6 @@ public class ParcelListView extends AppCompatActivity {
         //Get all Id's
         btnBack = findViewById(R.id.btnBack);
 
-
         //Intent to Parcel Management Menu
         btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +98,14 @@ public class ParcelListView extends AppCompatActivity {
                 Intent intentBack = new Intent(ParcelListView.this,
                         ParcelManagementMain.class);
                 startActivity(intentBack);
+            }
+        });
+
+        btnSearch = findViewById(R.id.imageButton);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 
