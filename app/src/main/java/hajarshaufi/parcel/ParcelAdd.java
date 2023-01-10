@@ -49,6 +49,7 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
     private Spinner courierSpinner;
 
     String availableStatus = "Available";
+    String url = "http://10.131.78.199/condoapp/insertParcel.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -176,7 +177,6 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
                                    String collectStatus) {
 
         // url to post our data
-        String url = "http://192.168.43.225/condoapp/insertParcel.php";
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(ParcelAdd.this);

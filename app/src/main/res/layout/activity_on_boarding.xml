@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/background1"
+    tools:context=".OnBoardingActivity">
+
+    <Button
+        android:id="@+id/btnUserLogin"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:padding="10dp"
+        android:text="Residents Login"
+        android:textColor="@color/white"
+        android:background="@drawable/black_btn"
+        android:textSize="20dp"
+        app:cornerRadius="15dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
+
+    <Button
+        android:id="@+id/btnStaffLogin"
+        android:layout_below="@+id/btnUserLogin"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/black_btn"
+        android:padding="10dp"
+        android:text="Staff Login"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:cornerRadius="15dp" />
+
+
+</RelativeLayout>

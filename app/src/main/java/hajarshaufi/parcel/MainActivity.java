@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intentParcel = new Intent(MainActivity.this, ParcelManagementMain.class);
+                Intent intentParcel = new Intent(MainActivity.this, ResidentParcelListView.class);
                 startActivity(intentParcel);
             }
         });

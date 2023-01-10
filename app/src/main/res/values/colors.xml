@@ -20,4 +20,11 @@
     <color name="red">#FF0000</color>
     <color name="silver">#C0C0C0</color>
     <color name="gainsboro">#DCDCDC</color>
+
+    <!-- Israt -->
+    <color name="textColor">#1E4175</color>
+    <color name="backgroundColor">#ecf0f3</color>
+    <color name="highlight">#ffffff</color>
+    <color name="s_text">#028EFD</color>
+    <color name="dart_s">#ff00</color>
 </resources>

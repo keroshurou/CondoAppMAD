@@ -3,13 +3,16 @@ package hajarshaufi.parcel;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -38,12 +41,13 @@ public class ParcelListView extends AppCompatActivity {
     ListView listView;
     ParcelAdapter parcelAdapter;
     public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
-    String url = "http://192.168.43.225/condoapp/fetchDataParcel.php";
-    String url1 = "http://192.168.43.225/condoapp/deleteParcel.php";
-    String url3 = "http://192.168.43.225/condoapp/searchParcel.php";
+    String url = "http://10.131.78.199/condoapp/fetchDataParcel.php";
+    String url1 = "http://10.131.78.199/condoapp/deleteParcel.php";
+    String url3 = "http://10.131.78.199/condoapp/searchParcel.php";
     Parcel parcel;
     ImageButton btnSearch;
     EditText edtSearchBar;
+    String searchResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +66,16 @@ public class ParcelListView extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 ProgressDialog progressDialog = new ProgressDialog(view.getContext());
 
+                Dialog customDialog;
+                customDialog = new Dialog(ParcelListView.this);
+                customDialog.setContentView(R.layout.custom_dialog);
+                customDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+                customDialog.setCancelable(false);
+                customDialog.getWindow().getAttributes().windowAnimations = androidx.appcompat.R.style.Animation_AppCompat_Dialog;
+
+                Button delete = customDialog.findViewById(R.id.btn_delete);
+                Button cancel = customDialog.findViewById(R.id.btn_cancel);
+
                 CharSequence[] dialogItem = {"View Parcel","Edit Parcel","Delete Parcel"};
                 builder.setTitle(parcelArrayList.get(position).getTrackingNumber());
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
@@ -79,9 +93,18 @@ public class ParcelListView extends AppCompatActivity {
                                         .putExtra("position",position));
                                 break;
                             case 2:
-                                startActivity(new Intent(getApplicationContext(),DeleteParcel.class)
-                                        .putExtra("position",position));
-                                //deleteData(parcelArrayList.get(position).getParcelID());
+                                customDialog.show();
+                                delete.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        deleteData(parcelArrayList.get(position).getParcelID());
+                                        customDialog.dismiss();
+                                        Intent intent = new Intent(ParcelListView.this,
+                                                ParcelListView.class);
+                                        startActivity(intent);
+                                        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                                    }
+                                });
                                 break;
                         }
 
@@ -110,6 +133,7 @@ public class ParcelListView extends AppCompatActivity {
 
         edtSearchBar = findViewById(R.id.searchBar);
         btnSearch = findViewById(R.id.imageButton);
+        searchResult = edtSearchBar.getText().toString();
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,7 +142,7 @@ public class ParcelListView extends AppCompatActivity {
                     return;
                 }
                 // calling method to load data.
-                getSearchData(edtSearchBar.getText().toString());
+                getSearchData(searchResult);
             }
         });
     }
@@ -176,8 +200,6 @@ public class ParcelListView extends AppCompatActivity {
 
     private void getSearchData(String collectorName) {
 
-        // url to post our data
-        String url = "http://localhost/courseApp/searchParcel.php";
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(ParcelListView.this);
