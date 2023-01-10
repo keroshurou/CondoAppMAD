@@ -35,6 +35,15 @@ public class StaffHomeScreenActivity extends AppCompatActivity {
                 startActivity(intentParcel);
             }
         });
+
+        binding.staffFacility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intentParcel = new Intent(StaffHomeScreenActivity.this, FacilitiesSettingMenu.class);
+                startActivity(intentParcel);
+            }
+        });
         //binding.btnNotification.setOnClickListener(new View.OnClickListener() {
         //@Override
         //public void onClick(View view) {

@@ -76,4 +76,21 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string-array name="str2">
+        <item>9am-11am</item>
+        <item>11am-1pm</item>
+        <item>1pm-3pm</item>
+        <item>3pm-5pm</item>
+        <item>5pm-7pm</item>
+        <item>7pm-9pm</item>
+        <item>9pm-11pm</item>
+    </string-array>
+
+    <string-array name="str3">
+        <item>Cleaning, Sanitizing and Disinfect</item>
+        <item>Construction</item>
+        <item>Renovation Work</item>
+        <item>Pest Control</item>
+    </string-array>
 </resources>

@@ -59,5 +59,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentParcel);
             }
         });
+
+        binding.residentFacility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentParcel = new Intent(MainActivity.this, FacilityBookingMenu.class);
+                startActivity(intentParcel);
+            }
+        });
     }
 }
