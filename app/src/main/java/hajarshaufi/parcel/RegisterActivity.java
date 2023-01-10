@@ -27,7 +27,7 @@ import hajarshaufi.parcel.databinding.ActivityRegisterBinding;
 public class RegisterActivity extends AppCompatActivity {
 
     private ActivityRegisterBinding binding;
-    String url = "http://10.131.78.199/condoapp/register.php";
+    String url = "http://192.168.43.255/condoapp/register.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

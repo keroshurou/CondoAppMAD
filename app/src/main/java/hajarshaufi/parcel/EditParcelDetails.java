@@ -193,7 +193,7 @@ public class EditParcelDetails extends AppCompatActivity implements AdapterView.
         progressDialog.setMessage("Updating....");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.225/condoapp/updateParcel.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.16/condoapp/updateParcel.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

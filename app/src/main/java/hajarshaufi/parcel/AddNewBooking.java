@@ -52,10 +52,7 @@ public class AddNewBooking extends AppCompatActivity {
     ArrayList<String> facilityList = new ArrayList<>();
     ArrayAdapter<String> facilityAdapter;
     RequestQueue requestQueue;
-    //String url1 = "http://10.131.77.213/";
-   // String url1 = "http://192.168.1.14/";
-    String url1 = "http://10.131.78.199/condoapp/";
-    //String url1 = "http://192.168.0.8/";
+    String url1 = "http://192.168.43.225/condoapp/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

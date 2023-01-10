@@ -120,6 +120,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/visitorRes"
                 android:layout_width="match_parent"
                 android:layout_height="170sp"
                 android:layout_margin="5dp"

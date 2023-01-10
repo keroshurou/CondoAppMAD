@@ -93,4 +93,10 @@
         <item>Renovation Work</item>
         <item>Pest Control</item>
     </string-array>
+
+    <string-array name="vehicletype">
+        <item>None</item>
+        <item>CAR</item>
+        <item>MOTORCYCLE</item>
+    </string-array>
 </resources>

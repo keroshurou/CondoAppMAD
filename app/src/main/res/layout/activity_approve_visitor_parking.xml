@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    tools:context=".ApproveVisitorParking"
+    tools:layout_editor_absoluteX="-23dp"
+    tools:layout_editor_absoluteY="-158dp">
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:text="Approve Parking"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Parking Lot"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Type"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <TextView
+        android:id="@+id/VehicleTypeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.213" />
+
+    <TextView
+        android:id="@+id/txtParkingLot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_btn"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.214" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="552dp"
+        android:layout_height="183dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/building" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="365dp"
+        android:layout_height="334dp"
+        android:background="@drawable/constrain_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473">
+
+
+        <Button
+            android:id="@+id/btnMotor3"
+            android:layout_width="58dp"
+            android:layout_height="77dp"
+            android:onClick="fnMotor3"
+            android:text="A1 M102"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.007" />
+
+        <Button
+            android:id="@+id/btnCar4"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="103dp"
+            android:layout_marginTop="274dp"
+            android:layout_marginEnd="182dp"
+            android:textColor="@color/white"
+            android:onClick="fnCar4"
+            android:text="A1 C103"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCar10"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="142dp"
+            android:layout_marginTop="184dp"
+            android:layout_marginEnd="143dp"
+            android:layout_marginBottom="90dp"
+            android:onClick="fnCar10"
+            android:text="A1 C108"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCar8"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="285dp"
+            android:layout_marginTop="94dp"
+            android:layout_marginBottom="180dp"
+            android:onClick="fnCar8"
+            android:text="A1 C107"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCar9"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="142dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="143dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="149dp"
+            android:onClick="fnCar9"
+            android:text="A1 C109"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCar5"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="183dp"
+            android:layout_marginTop="274dp"
+            android:layout_marginEnd="102dp"
+            android:textColor="@color/white"
+            android:onClick="fnCar5"
+            android:text="A1 C104"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCar7"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="285dp"
+            android:layout_marginTop="154dp"
+            android:layout_marginBottom="120dp"
+            android:textColor="@color/white"
+            android:onClick="fnCar7"
+            android:text="A1 C106"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCar6"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="285dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="214dp"
+            android:layout_marginBottom="60dp"
+            android:onClick="fnCar6"
+            android:text="A1 C105"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCar2"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="154dp"
+            android:layout_marginEnd="284dp"
+            android:layout_marginBottom="120dp"
+            android:textColor="@color/white"
+            android:onClick="fnCar2"
+            android:text="A1 C101"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btnCar1"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:onClick="fnCar1"
+            android:text="A1 C100"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.003"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.343" />
+
+        <Button
+            android:id="@+id/btnCar3"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="214dp"
+            android:layout_marginEnd="284dp"
+            android:layout_marginBottom="60dp"
+            android:onClick="fnCar3"
+            android:textColor="@color/white"
+            android:text="A1 C102"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMotor1"
+            android:layout_width="58dp"
+            android:layout_height="77dp"
+            android:onClick="fnMotor1"
+            android:text="A1 M100"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.007" />
+
+        <Button
+            android:id="@+id/btnMotor4"
+            android:layout_width="58dp"
+            android:layout_height="77dp"
+            android:onClick="fnMotor4"
+            android:text="A1 M103"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.687"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.007" />
+
+        <Button
+            android:id="@+id/btnMotor5"
+            android:layout_width="58dp"
+            android:layout_height="77dp"
+            android:onClick="fnMotor5"
+            android:text="A1 M104"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.878"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.007" />
+
+        <Button
+            android:id="@+id/btnMotor2"
+            android:layout_width="58dp"
+            android:layout_height="77dp"
+            android:onClick="fnMotor2"
+            android:text="A1 M101"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.309"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.007" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnEditParking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_btn"
+        android:text="Update Parking Lot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.784" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:background="@drawable/back_button"
+        android:contentDescription="@string/app_name"
+        android:onClick="fnBackParking"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

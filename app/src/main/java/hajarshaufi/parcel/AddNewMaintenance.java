@@ -46,11 +46,7 @@ public class AddNewMaintenance extends AppCompatActivity {
     private String facilityName, maintenanceTime, maintenanceDate, maintenanceReason;
     private DatePickerDialog datePicker;
 
-    //String url1 = "http://10.131.77.213/";
-    //String url1 = "http://192.168.1.14/";
-    String url1 = "http://10.131.78.199/condoapp/";
-    //String url1 = "http://192.168.0.8/";
-
+    String url1 = "http://192.168.43.225/condoapp/";
 
     ArrayList<String> facilityList = new ArrayList<>();
     ArrayAdapter<String> facilityAdapter;

@@ -30,6 +30,7 @@ public class Facilities_Report extends AppCompatActivity {
     TextView txtReport;
     ImageButton btnBack,btnSearch;
     EditText edSearch;
+    String url = "http://192.168.43.255/condoapp/booking_report.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,6 @@ public class Facilities_Report extends AppCompatActivity {
             public void onClick(View view) {*/
                 //String data = edSearch.getText().toString();
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url = "http://10.131.78.199/condoapp/booking_report.php";
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {

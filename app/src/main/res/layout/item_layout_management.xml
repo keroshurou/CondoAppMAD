@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1,2,3,4,5,6,7">
+
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/ttVisitorName"
+            android:layout_column="0"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+
+        <TextView
+            android:id="@+id/ttPhoneNumber"
+            android:layout_column="1"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/ttCheckInDate"
+            android:layout_column="2"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/ttCheckOutDate"
+            android:layout_column="3"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/ttParkingNumber"
+            android:layout_column="4"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/ttApproveStatus"
+            android:layout_column="5"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+
+        <ImageButton
+            android:id="@+id/btnApprove"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_column="8"
+            android:background="@drawable/ic_baseline_more_vert_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </TableRow>
+
+</TableLayout>

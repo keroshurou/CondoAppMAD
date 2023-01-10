@@ -44,6 +44,14 @@ public class StaffHomeScreenActivity extends AppCompatActivity {
                 startActivity(intentParcel);
             }
         });
+
+        binding.staffVisitor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentParcel = new Intent(StaffHomeScreenActivity.this, ViewVisitorManagement.class);
+                startActivity(intentParcel);
+            }
+        });
         //binding.btnNotification.setOnClickListener(new View.OnClickListener() {
         //@Override
         //public void onClick(View view) {

@@ -27,4 +27,6 @@
     <color name="highlight">#ffffff</color>
     <color name="s_text">#028EFD</color>
     <color name="dart_s">#ff00</color>
+
+    <color name="background_gray">#E6EEF4</color>
 </resources>
