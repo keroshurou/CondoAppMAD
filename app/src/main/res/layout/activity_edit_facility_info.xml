@@ -51,16 +51,15 @@
 
     <TextView
         android:id="@+id/txtFacilityID"
-        android:layout_width="94dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editFacilityInfo"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="262dp"
-        android:text="Facilty ID"
+        android:layout_marginEnd="4dp"
+        android:text="Facility ID"
         android:textColor="#050505"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -69,15 +68,14 @@
 
     <EditText
         android:id="@+id/editTxtFID"
-        android:layout_width="310dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:enabled="false"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtFacilityID"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginTop="12dp"
         android:elevation="10dp"
         android:ems="10"
         android:hint="Facility ID"
@@ -90,14 +88,13 @@
 
     <TextView
         android:id="@+id/txtFacilityName"
-        android:layout_width="152dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTxtFID"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="204dp"
         android:text="Facilty Name"
         android:textColor="#050505"
@@ -108,10 +105,9 @@
 
     <EditText
         android:id="@+id/editTxtFName"
-        android:layout_width="310dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:layout_below="@id/txtFacilityName"
@@ -145,11 +141,10 @@
 
     <EditText
         android:id="@+id/editTxtFLocation"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
         android:layout_below="@id/txtFacilityLocation"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginTop="12dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/white_column"
@@ -169,10 +164,8 @@
         android:layout_below="@id/editTxtFLocation"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-
         android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="53dp"
         android:text="Capacity (Number of peoples )"
         android:textColor="#050505"
@@ -183,16 +176,14 @@
 
     <EditText
         android:id="@+id/editTxtFCapacity"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
         android:layout_below="@id/txtFacilityCapacity"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="10dp"
-
+        android:layout_marginTop="12dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
@@ -220,8 +211,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="412dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -233,7 +224,6 @@
         android:layout_marginBottom="1dp"
         android:scaleType="fitEnd"
         app:srcCompat="@drawable/building" />
-
     <!--<ImageView
         android:id="@+id/imageView"
         android:layout_width="412dp"

@@ -40,6 +40,7 @@ public class EditParcelDetails extends AppCompatActivity implements AdapterView.
     private int position;
     private DatePickerDialog datePicker;
     private Spinner courierSpinner, statusSpinner;
+    String url = "http://192.168.146.86/condoapp/updateParcel.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -193,7 +194,7 @@ public class EditParcelDetails extends AppCompatActivity implements AdapterView.
         progressDialog.setMessage("Updating....");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.16/condoapp/updateParcel.php",
+        StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

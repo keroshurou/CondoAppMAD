@@ -9,6 +9,18 @@
     android:background="#E6EEF4"
     tools:context=".Facilities_Report">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitEnd"
+        app:srcCompat="@drawable/building" />
+
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="47dp"
@@ -17,25 +29,22 @@
         android:layout_alignParentTop="true"
         android:layout_centerInParent="false"
         android:layout_marginTop="40dp"
-        android:layout_marginRight="12dp"
         android:layout_marginBottom="5dp"
-        android:layout_toLeftOf="@id/detailFacility"
         android:background="@drawable/back_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    />
 
     <TextView
         android:id="@+id/detailFacility"
-        android:layout_width="297dp"
-        android:layout_height="47dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="40dp"
 
         android:text="Facilities Booking Report"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -69,15 +78,4 @@
 
     </ScrollView>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="412dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:scaleType="fitEnd"
-        app:srcCompat="@drawable/building" />
 </RelativeLayout>

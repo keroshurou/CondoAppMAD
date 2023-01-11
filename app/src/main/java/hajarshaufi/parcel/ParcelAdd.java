@@ -49,7 +49,7 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
     private Spinner courierSpinner;
 
     String availableStatus = "Available";
-    String url = "http://192.168.43.255/condoapp/insertParcel.php";
+    String url = "http://192.168.146.86/condoapp/insertParcel.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +112,7 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
                                             + "-" + dayOfMonth);
                                 }
                             }, year,month, day);
-                    datePicker.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    //datePicker.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                     datePicker.show();
 
                     /***final Calendar cldr = Calendar.getInstance();

@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                onBackPressed();
+                Intent intentParcel = new Intent(MainActivity.this, LogoutActivity.class);
+                startActivity(intentParcel);
             }
         });
 

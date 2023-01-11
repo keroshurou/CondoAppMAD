@@ -33,7 +33,7 @@ public class AddNewFacility extends AppCompatActivity {
     Button btnAdd;
     private EditText etName, etLocation, etCapacity;
     private String facilityName,location,capacity;
-    String url1 = "http://192.168.43.225/condoapp/";
+    String url1 = "http://192.168.146.86/condoapp/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

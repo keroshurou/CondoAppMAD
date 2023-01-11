@@ -64,7 +64,7 @@
 
     <TextView
         android:id="@+id/txtID"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_below="@id/detailParcel"
@@ -78,7 +78,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtID"
@@ -92,7 +92,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtName"
@@ -106,7 +106,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@+id/txtParcelUnit"
@@ -120,7 +120,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtTrackingNumber"
@@ -134,7 +134,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtExpressBrand"
@@ -148,7 +148,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtDeliveredDate"
@@ -162,7 +162,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/white_column"
         android:layout_below="@id/txtCollectStatus"

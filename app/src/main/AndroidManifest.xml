@@ -16,6 +16,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".LogoutActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Approve"
             android:exported="false">
             <meta-data
@@ -87,7 +94,6 @@
         <activity
             android:name=".mainPage"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -99,13 +105,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
+        <!--<activity
             android:name=".Custom_calendar"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
+        </activity>-->
         <activity
             android:name=".Facilities_Report"
             android:exported="false">
@@ -214,7 +220,6 @@
         <activity
             android:name=".FacilityBookingMenu"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="409dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="update visitor"
         android:textAlignment="center"
@@ -20,14 +20,13 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <EditText
         android:id="@+id/etVisitorName"
-        android:layout_width="321dp"
+        android:layout_width="300dp"
         android:layout_height="32dp"
         android:background="@drawable/custom_btn"
         android:ems="10"
@@ -47,7 +46,7 @@
 
     <EditText
         android:id="@+id/etPhoneNumber"
-        android:layout_width="321dp"
+        android:layout_width="300dp"
         android:layout_height="32dp"
         android:background="@drawable/custom_btn"
         android:ems="10"
@@ -104,7 +103,7 @@
 
     <EditText
         android:id="@+id/etNoOfVisitors"
-        android:layout_width="321dp"
+        android:layout_width="300dp"
         android:layout_height="32dp"
         android:background="@drawable/custom_btn"
         android:ems="10"
@@ -123,7 +122,7 @@
 
     <EditText
         android:id="@+id/etPlateNumber"
-        android:layout_width="321dp"
+        android:layout_width="300dp"
         android:layout_height="32dp"
         android:background="@drawable/custom_btn"
         android:ems="10"
@@ -142,7 +141,7 @@
 
     <EditText
         android:id="@+id/etLicenceNumber"
-        android:layout_width="321dp"
+        android:layout_width="300dp"
         android:layout_height="32dp"
         android:background="@drawable/custom_btn"
         android:ems="10"
@@ -297,18 +296,18 @@
         android:id="@+id/btnEdit"
         android:layout_width="83dp"
         android:layout_height="38dp"
-        android:background="@drawable/custom_btn"
+        android:background="@drawable/black_btn"
         android:text="Edit"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintHorizontal_bias="0.805"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.696"
+        app:layout_constraintVertical_bias="0.781"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Spinner

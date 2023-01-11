@@ -14,7 +14,6 @@
         android:layout_width="46dp"
         android:layout_height="49dp"
         android:background="@drawable/back_button"
-
         app:layout_constraintBottom_toTopOf="@+id/btnBooking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.073"

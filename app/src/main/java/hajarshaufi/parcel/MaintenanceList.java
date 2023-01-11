@@ -43,7 +43,7 @@ public class MaintenanceList extends AppCompatActivity {
     MaintenanceAdapter maintenanceAdapter;
     public static ArrayList<Maintenance> maintenanceArrayList = new ArrayList<>();
     Maintenance maintenance;
-    String url1 = "http://192.168.43.255/condoapp/";
+    String url1 = "http://192.168.146.86/condoapp/";
     String url = url1+"get_maintenance.php";
 
 

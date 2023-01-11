@@ -12,46 +12,49 @@
 
     <ImageButton
         android:id="@+id/btnBack"
-        android:layout_width="46dp"
-        android:layout_height="49dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:background="@drawable/back_button"
         app:layout_constraintBottom_toTopOf="@+id/txtFacilityID"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.361" />
 
     <ImageButton
         android:id="@+id/btnEditFacility"
-        android:layout_width="44dp"
-        android:layout_height="43dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/ic_baseline_edit_24"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toRightOf="@id/addNew"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/addNew"
-        android:layout_width="215dp"
-        android:layout_height="39dp"
-        android:text="Add New Facility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif"
+        android:text="Add New Facility"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.061" />
 
     <EditText
         android:id="@+id/editTxtFName"
-        android:layout_width="310dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
@@ -68,8 +71,8 @@
 
     <EditText
         android:id="@+id/editTxtFLocation"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
@@ -118,7 +121,7 @@
         android:id="@+id/txtFacilityID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Facilty Name"
+        android:text="Facility Name"
         android:textColor="#050505"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -131,8 +134,8 @@
 
     <EditText
         android:id="@+id/editTxtFCapacity"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
@@ -157,10 +160,9 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTxtFCapacity"
-        app:layout_constraintVertical_bias="0.178" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <!--<ImageView
         android:id="@+id/imageView"
@@ -175,8 +177,8 @@
         app:srcCompat="@drawable/building" />-->
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="412dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"

@@ -41,9 +41,9 @@ public class ParcelListView extends AppCompatActivity {
     ListView listView;
     ParcelAdapter parcelAdapter;
     public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
-    String url = "http://192.168.43.255/condoapp/fetchDataParcel.php";
-    String url1 = "http://192.168.43.255/condoapp/deleteParcel.php";
-    String url3 = "http://192.168.43.255/condoapp/searchParcel.php";
+    String url = "http://192.168.146.86/condoapp/fetchDataParcel.php";
+    String url1 = "http://192.168.146.86/condoapp/deleteParcel.php";
+    String url3 = "http://192.168.146.86/condoapp/searchParcel.php";
     Parcel parcel;
     ImageButton btnSearch;
     EditText edtSearchBar;

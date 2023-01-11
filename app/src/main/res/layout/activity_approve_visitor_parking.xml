@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="409dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Approve Parking"
         android:textAlignment="center"
@@ -20,6 +20,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.065" />
@@ -99,8 +100,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="365dp"
-        android:layout_height="334dp"
+        android:layout_width="333dp"
+        android:layout_height="314dp"
         android:background="@drawable/constrain_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,25 +131,27 @@
             android:layout_marginStart="103dp"
             android:layout_marginTop="274dp"
             android:layout_marginEnd="182dp"
-            android:textColor="@color/white"
             android:onClick="fnCar4"
             android:text="A1 C103"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.406"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/btnCar10"
             android:layout_width="80dp"
             android:layout_height="60dp"
-            android:textColor="@color/white"
             android:layout_marginStart="142dp"
             android:layout_marginTop="184dp"
             android:layout_marginEnd="143dp"
             android:layout_marginBottom="90dp"
             android:onClick="fnCar10"
             android:text="A1 C108"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -158,16 +161,18 @@
             android:id="@+id/btnCar8"
             android:layout_width="80dp"
             android:layout_height="60dp"
-            android:textColor="@color/white"
             android:layout_marginStart="285dp"
             android:layout_marginTop="94dp"
             android:layout_marginBottom="180dp"
             android:onClick="fnCar8"
             android:text="A1 C107"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
 
         <Button
             android:id="@+id/btnCar9"
@@ -176,10 +181,10 @@
             android:layout_marginStart="142dp"
             android:layout_marginTop="125dp"
             android:layout_marginEnd="143dp"
-            android:textColor="@color/white"
             android:layout_marginBottom="149dp"
             android:onClick="fnCar9"
             android:text="A1 C109"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -192,13 +197,14 @@
             android:layout_marginStart="183dp"
             android:layout_marginTop="274dp"
             android:layout_marginEnd="102dp"
-            android:textColor="@color/white"
             android:onClick="fnCar5"
             android:text="A1 C104"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/btnCar7"
@@ -207,26 +213,29 @@
             android:layout_marginStart="285dp"
             android:layout_marginTop="154dp"
             android:layout_marginBottom="120dp"
-            android:textColor="@color/white"
             android:onClick="fnCar7"
             android:text="A1 C106"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <Button
             android:id="@+id/btnCar6"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="285dp"
-            android:textColor="@color/white"
             android:layout_marginTop="214dp"
             android:layout_marginBottom="60dp"
             android:onClick="fnCar6"
             android:text="A1 C105"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -238,14 +247,14 @@
             android:layout_marginTop="154dp"
             android:layout_marginEnd="284dp"
             android:layout_marginBottom="120dp"
-            android:textColor="@color/white"
             android:onClick="fnCar2"
             android:text="A1 C101"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <Button
             android:id="@+id/btnCar1"
@@ -270,10 +279,11 @@
             android:layout_marginEnd="284dp"
             android:layout_marginBottom="60dp"
             android:onClick="fnCar3"
-            android:textColor="@color/white"
             android:text="A1 C102"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -337,9 +347,10 @@
 
     <Button
         android:id="@+id/btnEditParking"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_btn"
+        android:background="@drawable/black_btn"
+        android:textColor="@color/white"
         android:text="Update Parking Lot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -357,9 +368,9 @@
         android:onClick="fnBackParking"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.056" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,7 +26,7 @@ public class ViewVisitorManagement extends AppCompatActivity {
     List<Visitor> visitorList;
 
     ViewVisitorManagementAdapter adapterManagement;
-    String url = "http://192.168.43.255/condoapp/getViewVisitorManagement.php";
+    String url = "http://192.168.146.86/condoapp/getViewVisitorManagement.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

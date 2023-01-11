@@ -10,8 +10,8 @@
 
     <ImageButton
         android:id="@+id/btnBack"
-        android:layout_width="48dp"
-        android:layout_height="49dp"
+        android:layout_width="37dp"
+        android:layout_height="40dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="38dp"
         android:layout_marginRight="7dp"
@@ -26,6 +26,7 @@
         android:id="@+id/btnEditBooking"
         android:layout_width="44dp"
         android:layout_height="43dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="44dp"
         android:layout_toRightOf="@id/addNew"
         android:background="@drawable/ic_baseline_edit_24"
@@ -33,7 +34,7 @@
 
     <TextView
         android:id="@+id/addNew"
-        android:layout_width="216dp"
+        android:layout_width="wrap_content"
         android:layout_height="47dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="41dp"
@@ -52,87 +53,77 @@
 
     <TextView
         android:id="@+id/txtFacility"
-        android:layout_width="94dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/addNew"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="262dp"
-        android:text="Facilty"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="18dp"
+        android:text="Facility"
         android:textColor="#050505"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addNew" />
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/spinnerFacility"
         android:layout_width="310dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:paddingTop="10dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/txtFacility"
         android:layout_centerVertical="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/spinner_style"
+        android:elevation="10dp"
         android:gravity="center"
+        android:paddingTop="10dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_below="@id/txtFacility"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        android:elevation="10dp"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/txtFacilityTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="262dp"
+        android:layout_below="@id/spinnerFacility"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
         android:text="Time"
         android:textColor="#050505"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_below="@id/spinnerFacility"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/spinnerTime"
         android:layout_width="310dp"
-        android:layout_height="49dp"
+        android:layout_height="48dp"
         android:layout_below="@id/txtFacilityTime"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
         android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="50dp"
-        android:paddingTop="10dp"
         android:background="@drawable/spinner_style"
         android:elevation="10dp"
         android:entries="@array/str2"
         android:gravity="center"
+        android:paddingTop="10dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <TextView
         android:id="@+id/txtDate"
-        android:layout_width="94dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/spinnerTime"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="262dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
         android:text="Date"
         android:textColor="#050505"
         android:textSize="20sp"
@@ -141,18 +132,17 @@
         app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent" />
 
-
     <EditText
         android:id="@+id/editBookingDate"
         android:layout_width="310dp"
-        android:layout_height="50dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/txtDate"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/white_column"
-        android:layout_below="@id/txtDate"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="50dp"
         android:elevation="10dp"
         android:ems="10"
         android:hint="Enter booking date"
@@ -160,133 +150,6 @@
         android:textSize="16sp"
         tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="166dp" />
-
-
-    <!--<LinearLayout
-        android:id="@+id/head_calendar"
-        android:layout_width="336dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtDate"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:background="#FFFFFF"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:onClick="previousMonthAction"
-            android:text="To previous"
-            android:textColor="@color/blue"
-            android:textSize="10sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/monthYearTV"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Jan 2023"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:onClick="nextMonthAction"
-            android:text="To next"
-            android:textColor="@color/blue"
-            android:textSize="10sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="336dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/head_calendar"
-        android:id="@+id/calendar_cell"
-        android:background="#FFFFFF"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="SUN"
-            android:textColor="@color/gray"
-            android:textAlignment="center"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="MON"
-            android:textColor="@color/gray"
-            android:textAlignment="center"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TUE"
-            android:textColor="@color/gray"
-            android:textAlignment="center"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="WED"
-            android:textColor="@color/gray"
-            android:textAlignment="center"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="THUR"
-            android:textColor="@color/gray"
-            android:textAlignment="center"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="FRI"
-            android:textColor="@color/gray"
-            android:textAlignment="center"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="SAT"
-            android:textColor="@color/gray"
-            android:textAlignment="center"
-            android:textSize="16sp"/>
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/calendarRecyclerView"
-        android:layout_width="336dp"
-        android:layout_height="209dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/calendar_cell"
-        android:background="#FFFFFF" />-->
 
     <Button
         android:id="@+id/btnBook"
