@@ -6,7 +6,8 @@ $conn = mysqli_connect('localhost', 'root', '', 'condoapp');
 
 $result = array();
 $result['item'] = array();
-$select = "SELECT * from parcel";
+$select = "SELECT * FROM `parcel` WHERE `collectStatus` LIKE 'Available'";
+$select2 = "SELECT * FROM `parcel` WHERE `parcelUnit` LIKE '18' AND `collectStatus` LIKE 'Available'";
 $response = mysqli_query($conn, $select);
 
 while ($row = mysqli_fetch_array($response)){
@@ -26,14 +27,5 @@ while ($row = mysqli_fetch_array($response)){
 	$result["success"] = "1";
 	echo json_encode($result, JSON_PRETTY_PRINT);
 	mysql_close($conn);
-
-/*if(mysqli_query($conn,$Sql_Query)){
-	echo 'Data Submit Successfully';
-	}
-	else{
-		echo 'Try Again';
-		}
-mysqli_close($con);
-*/
 
 ?>
