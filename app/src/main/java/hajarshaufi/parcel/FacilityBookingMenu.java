@@ -18,8 +18,8 @@ public class FacilityBookingMenu extends AppCompatActivity {
         setContentView(R.layout.activity_facility_booking_menu);
 
         //Get all Id's
-        btnBooking = (Button) findViewById(R.id.btnBooking);
-        btnViewBooking = (Button) findViewById(R.id.btnViewBooking);
+        btnBooking = findViewById(R.id.btnBooking);
+        btnViewBooking = findViewById(R.id.btnViewBooking);
 
         //Intent to Add New Facility
         btnBooking.setOnClickListener(new View.OnClickListener() {
