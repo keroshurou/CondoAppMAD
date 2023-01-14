@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class ParcelManagementMain extends AppCompatActivity {
 
-    Button insertParcelBtn, parcelReportBtn;
+    Button insertParcelBtn, parcelReportBtn, parcelStatus;
     ImageButton homeBtn;
 
     @Override
@@ -21,6 +21,7 @@ public class ParcelManagementMain extends AppCompatActivity {
         insertParcelBtn = findViewById(R.id.insertParcelBtn);
         parcelReportBtn = findViewById(R.id.parcelReportBtn);
         homeBtn = findViewById(R.id.homeBtn);
+        //parcelStatus = findViewById(R.id.parcelStatus);
 
         //intent to insert parcel
         insertParcelBtn.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +48,14 @@ public class ParcelManagementMain extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        /*parcelStatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ParcelManagementMain.this, ParcelListView.class);
+                startActivity(intent);
+            }
+        });*/
 
     }
 

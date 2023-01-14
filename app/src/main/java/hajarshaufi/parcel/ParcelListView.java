@@ -76,7 +76,7 @@ public class ParcelListView extends AppCompatActivity {
                 Button delete = customDialog.findViewById(R.id.btn_delete);
                 Button cancel = customDialog.findViewById(R.id.btn_cancel);
 
-                CharSequence[] dialogItem = {"View Parcel","Edit Parcel","Delete Parcel"};
+                CharSequence[] dialogItem = {"View Parcel","Change Status","Edit Parcel","Delete Parcel"};
                 builder.setTitle(parcelArrayList.get(position).getTrackingNumber());
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
@@ -89,10 +89,14 @@ public class ParcelListView extends AppCompatActivity {
                                         .putExtra("position",position));
                                 break;
                             case 1:
-                                startActivity(new Intent(getApplicationContext(),EditParcelDetails.class)
+                                startActivity(new Intent(getApplicationContext(),ParcelChangeStatus.class)
                                         .putExtra("position",position));
                                 break;
                             case 2:
+                                startActivity(new Intent(getApplicationContext(),EditParcelDetails.class)
+                                        .putExtra("position",position));
+                                break;
+                            case 3:
                                 customDialog.show();
                                 delete.setOnClickListener(new View.OnClickListener() {
                                     @Override

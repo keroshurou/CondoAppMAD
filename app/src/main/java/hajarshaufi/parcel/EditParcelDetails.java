@@ -68,9 +68,9 @@ public class EditParcelDetails extends AppCompatActivity implements AdapterView.
         statusSpinner = findViewById(R.id.statusSpinner);
         ArrayAdapter<CharSequence> statusAdapter = ArrayAdapter.createFromResource(EditParcelDetails.this,
                 R.array.collectStatus, android.R.layout.simple_spinner_item);
-        courierAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        courierSpinner.setAdapter(statusAdapter);
-        courierSpinner.setOnItemSelectedListener(this);
+        statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        statusSpinner.setAdapter(statusAdapter);
+        statusSpinner.setOnItemSelectedListener(this);
 
 
         Intent intent = getIntent();
@@ -110,7 +110,7 @@ public class EditParcelDetails extends AppCompatActivity implements AdapterView.
                                             + "-" + dayOfMonth);
                                 }
                             }, year,month, day);
-                    datePicker.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    //datePicker.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                     datePicker.show();
                 }
                 return false;

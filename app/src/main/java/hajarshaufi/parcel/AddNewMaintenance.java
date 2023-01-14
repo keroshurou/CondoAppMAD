@@ -39,14 +39,18 @@ import java.util.Map;
 public class AddNewMaintenance extends AppCompatActivity {
 
     Spinner spinnerFacility, spinnerTime, spinnerReason;
-    ImageButton btnBack, btnEdit;
+    ImageButton btnBack;
     EditText edTxtDate;
     Button btnSave;
 
     private String facilityName, maintenanceTime, maintenanceDate, maintenanceReason;
     private DatePickerDialog datePicker;
 
-    String url1 = "http://192.168.146.86/condoapp/";
+    //String url1 = "http://10.131.77.213/";
+    String url1 = "http://192.168.146.86/";
+    //String url1 = "http://10.131.73.139/";
+    //String url1 = "http://192.168.0.8/";
+
 
     ArrayList<String> facilityList = new ArrayList<>();
     ArrayAdapter<String> facilityAdapter;
@@ -95,7 +99,6 @@ public class AddNewMaintenance extends AppCompatActivity {
 
         //Get all Id's
         btnBack = (ImageButton) findViewById(R.id.btnBack);
-        btnEdit = (ImageButton) findViewById(R.id.btnEditMaintenance);
 
         //Intent to Facilities Setting Menu
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -106,18 +109,6 @@ public class AddNewMaintenance extends AppCompatActivity {
                 startActivity(intentBack);
             }
         });
-
-        //Intent to Edit Maintenance
-        btnEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentBack = new Intent(AddNewMaintenance.this,
-                        MaintenanceList.class);
-                startActivity(intentBack);
-            }
-        });
-
-
 
         requestQueue = Volley.newRequestQueue(this);
         spinnerFacility = findViewById(R.id.spinnerFacility);
@@ -201,7 +192,7 @@ public class AddNewMaintenance extends AppCompatActivity {
         // on below line we are calling a string
         // request method to post the data to our API
         // in this we are calling a post method.
-        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("TAG", "RESPONSE IS " + response);

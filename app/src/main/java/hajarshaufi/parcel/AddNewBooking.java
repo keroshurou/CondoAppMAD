@@ -38,7 +38,7 @@ import java.util.Map;
 public class AddNewBooking extends AppCompatActivity {
 
     Spinner spinnerFacility, spinnerTime;
-    ImageButton btnBack, btnEdit;
+    ImageButton btnBack;
     EditText editBookingDate;
     Button btnBook;
 
@@ -52,7 +52,10 @@ public class AddNewBooking extends AppCompatActivity {
     ArrayList<String> facilityList = new ArrayList<>();
     ArrayAdapter<String> facilityAdapter;
     RequestQueue requestQueue;
-    String url1 = "http://192.168.146.86/condoapp/";
+    //String url1 = "http://10.131.77.213/";
+    String url1 = "http://192.168.146.86/";
+    //String url1 = "http://10.131.73.139/";
+    //String url1 = "http://192.168.0.8/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +64,6 @@ public class AddNewBooking extends AppCompatActivity {
 
         //Get all Id's
         btnBack = (ImageButton) findViewById(R.id.btnBack);
-        btnEdit = (ImageButton) findViewById(R.id.btnEditBooking);
         editBookingDate = (EditText) findViewById(R.id.editBookingDate);
 
         editBookingDate.setOnTouchListener(new View.OnTouchListener() {
@@ -103,16 +105,6 @@ public class AddNewBooking extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentBack = new Intent(AddNewBooking.this,
                         FacilityBookingMenu.class);
-                startActivity(intentBack);
-            }
-        });
-
-        //Intent to Booking List
-        btnEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentBack = new Intent(AddNewBooking.this,
-                        BookingList.class);
                 startActivity(intentBack);
             }
         });
@@ -191,7 +183,7 @@ public class AddNewBooking extends AppCompatActivity {
         // on below line we are calling a string
         // request method to post the data to our API
         // in this we are calling a post method.
-        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("TAG", "RESPONSE IS " + response);

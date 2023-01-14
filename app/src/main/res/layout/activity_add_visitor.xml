@@ -35,7 +35,6 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
@@ -53,7 +52,6 @@
         android:inputType="phone"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +63,7 @@
         android:layout_width="137dp"
         android:layout_height="30dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/custom_btn"
         android:ems="10"
         android:hint="Date"
@@ -73,7 +71,6 @@
         android:inputType="date"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
         tools:ignore="TouchTargetSizeCheck" />
@@ -82,8 +79,8 @@
         android:id="@+id/edtCheckOutDate"
         android:layout_width="137dp"
         android:layout_height="30dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/custom_btn"
         android:ems="10"
         android:hint="Date"
@@ -91,7 +88,6 @@
         android:inputType="date"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         app:layout_constraintStart_toEndOf="@+id/edtCheckInDate"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
         tools:ignore="TouchTargetSizeCheck" />
@@ -108,7 +104,6 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
@@ -126,7 +121,6 @@
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,7 +139,6 @@
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
@@ -252,7 +245,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="VehicleType"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -279,18 +272,17 @@
         android:layout_width="166dp"
         android:layout_height="31dp"
         android:layout_marginStart="28dp"
-        android:layout_marginBottom="96dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/spinner_style"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.4"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="48dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/back_button"
         android:contentDescription="@string/app_name"
@@ -309,24 +301,25 @@
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitEnd"
-        app:srcCompat="@drawable/building" />
 
     <Button
         android:id="@+id/btnEdit"
         android:layout_width="82dp"
         android:layout_height="39dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/black_btn"
-        android:textColor="@color/white"
         android:text="Add"
+        android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/edtVehicleType"
         app:layout_constraintTop_toBottomOf="@+id/edtCheckOutDate"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <!--<ImageView
+         android:id="@+id/imageView"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scaleType="fitEnd"
+         app:srcCompat="@drawable/building" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

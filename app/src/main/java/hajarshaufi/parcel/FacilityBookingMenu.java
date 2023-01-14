@@ -20,6 +20,7 @@ public class FacilityBookingMenu extends AppCompatActivity {
         //Get all Id's
         btnBooking = findViewById(R.id.btnBooking);
         btnViewBooking = findViewById(R.id.btnViewBooking);
+        btnBack = findViewById(R.id.btnBack);
 
         //Intent to Add New Facility
         btnBooking.setOnClickListener(new View.OnClickListener() {

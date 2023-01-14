@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".EditParcelDetails">
+    tools:context=".ParcelChangeStatus">
 
     <ImageView
         android:id="@+id/imageBuilding"
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:text="@string/insPTextEdit"
+        android:text="Change Status"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="26sp"
         android:textStyle="bold"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageBuilding" />
 
     <TextView
-        android:id="@+id/edtUpParcelID"
+        android:id="@+id/tvParcelID"
         android:layout_width="320dp"
         android:layout_height="38dp"
         android:layout_marginTop="24dp"
@@ -60,21 +60,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editParcelInfo" />
 
-    <EditText
-        android:id="@+id/edtUpTrackingNumber"
+    <TextView
+        android:id="@+id/tvTrackingNumber"
         android:layout_width="320dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="@string/editTrackingNumber"
+        android:hint="Tracking Number"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpUnitNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUnitNumber" />
 
     <TextView
         android:id="@+id/txtViewCollectStatus"
@@ -87,10 +87,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpDeliveredDate" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDeliveredDate" />
 
     <TextView
-        android:id="@+id/txtViewEmpty2"
+        android:id="@+id/txtViewEmpty"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -112,61 +112,39 @@
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewEmpty2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtViewEmpty" />
 
-    <EditText
-        android:id="@+id/edtUpUnitNumber"
+    <TextView
+        android:id="@+id/tvUnitNumber"
         android:layout_width="320dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="@string/editParcelUnit"
+        android:hint="Unit Number"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpCollectorName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCollectorName" />
 
     <TextView
-        android:id="@+id/txtViewCourier"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:elevation="10dp"
-        android:text="Enter Express Brand (Courier):"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpTrackingNumber" />
-
-    <TextView
-        android:id="@+id/txtViewEmpty"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:elevation="10dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewCourier" />
-
-    <Spinner
-        android:id="@+id/courierSpinner"
+        android:id="@+id/tvExpressBrand"
         android:layout_width="320dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/spinner_style"
+        android:background="@drawable/white_column"
         android:elevation="10dp"
-        android:gravity="center"
+        android:ems="10"
+        android:hint="Express Brand"
+        android:inputType="textPersonName"
         android:padding="10dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewEmpty" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTrackingNumber" />
 
     <EditText
         android:id="@+id/edtUpCollectedDate"
@@ -184,21 +162,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statusSpinner" />
 
-    <EditText
-        android:id="@+id/edtUpDeliveredDate"
+    <TextView
+        android:id="@+id/tvDeliveredDate"
         android:layout_width="320dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="@string/editDeliveredDate"
+        android:hint="Delivered Date"
         android:inputType="date"
         android:padding="10dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/courierSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/tvExpressBrand" />
 
     <Button
         android:id="@+id/btnUpdate"
@@ -214,21 +192,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtUpCollectedDate" />
 
-    <EditText
-        android:id="@+id/edtUpCollectorName"
+    <TextView
+        android:id="@+id/tvCollectorName"
         android:layout_width="320dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white_column"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="@string/editCollectorName"
+        android:hint="Recipient Name"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUpParcelID" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tvParcelID" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,7 +39,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
 
     String ApproveStatus="Approved";
     String url = "http://192.168.146.86/condoapp/viewVisitor.php";
-    String url1 = "http://192.168.146.86/condoapp/getParkingDetails.php";
+    String url1 = "http://1192.168.146.86/condoapp/getParkingDetails.php";
     String url2 = "http://192.168.146.86/condoapp/Approve.php";
 
     @Override

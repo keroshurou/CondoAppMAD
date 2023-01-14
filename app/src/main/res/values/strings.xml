@@ -2,7 +2,7 @@
 
     <string name="ipAddress">http://192.168.146.86/condoapp/</string>
     <!-- Main Activity Parcel. -->
-    <string name="app_name">Condominium Management Application</string>
+    <string name="app_name">iCondo</string>
     <string name="parcelBtn1">Insert Parcel Detail</string>
     <string name="parcelBtn2">Edit Parcel Detail</string>
     <string name="parcelBtn3">View Parcel</string>

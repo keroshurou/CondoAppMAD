@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FacilitiesSettingMenu extends AppCompatActivity {
 
-    Button btnAddFacility, btnMaintenance, btnFacilitiesReport;
-    ImageButton btnBack;
+    Button btnAddFacility, btnMaintenance, btnFacilitiesReport, btnEditFacility;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +20,7 @@ public class FacilitiesSettingMenu extends AppCompatActivity {
         btnAddFacility = (Button) findViewById(R.id.btnFacility);
         btnMaintenance = (Button) findViewById(R.id.btnMaintenance);
         btnFacilitiesReport = (Button) findViewById(R.id.btnFacilitiesReport);
-        btnBack = findViewById(R.id.btnBack);
+        btnEditFacility = (Button) findViewById(R.id.btnEditFacility);
 
         //Intent to Add New Facility
         btnAddFacility.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +28,16 @@ public class FacilitiesSettingMenu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentAdd = new Intent(FacilitiesSettingMenu.this,
                         AddNewFacility.class);
+                startActivity(intentAdd);
+            }
+        });
+
+        //Intent to Edit Facility
+        btnEditFacility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentAdd = new Intent(FacilitiesSettingMenu.this,
+                        FacilitiesList.class);
                 startActivity(intentAdd);
             }
         });
@@ -51,16 +59,6 @@ public class FacilitiesSettingMenu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentAdd = new Intent(FacilitiesSettingMenu.this,
                         Facilities_Report.class);
-                startActivity(intentAdd);
-            }
-        });
-
-        //Intent to Facilities Booking Report
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentAdd = new Intent(FacilitiesSettingMenu.this,
-                        StaffHomeScreenActivity.class);
                 startActivity(intentAdd);
             }
         });

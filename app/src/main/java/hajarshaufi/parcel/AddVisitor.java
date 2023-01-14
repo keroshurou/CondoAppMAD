@@ -159,14 +159,14 @@ public class AddVisitor extends AppCompatActivity implements AdapterView.OnItemS
             edtLicenceNumber.setError("Please enter licence number");
         } else {
             // calling method to add data to Firebase Firestore.
-            addDataToDatabase(VisitorName, Integer.parseInt(String.valueOf(PhoneNumber)), CheckInDate, CheckOutDate, Integer.parseInt(String.valueOf(No_of_Visitors)), VehicleType, PlateNumber, Licence_Number, ParkingNumber);
+            addDataToDatabase(VisitorName, Integer.parseInt(String.valueOf(PhoneNumber)), CheckInDate, CheckOutDate, Integer.parseInt(String.valueOf(No_of_Visitors)), VehicleType, PlateNumber, Licence_Number, ParkingNumber, ApproveParking);
             //Intent to Successful Added  Screen
             Intent intentSuccess = new Intent(AddVisitor.this, SuccessfullyAdded.class);
             startActivity(intentSuccess);
         }
     }
 
-    private void addDataToDatabase(String VisitorName, int PhoneNumber, String CheckInDate, String CheckOutDate, int No_of_Visitors, String VehicleType, String PlateNumber, String Licence_Number, String ParkingNumber) {
+    private void addDataToDatabase(String VisitorName, int PhoneNumber, String CheckInDate, String CheckOutDate, int No_of_Visitors, String VehicleType, String PlateNumber, String Licence_Number, String ParkingNumber,String ApproveParking) {
 
         // url to post our data
 
@@ -227,7 +227,7 @@ public class AddVisitor extends AppCompatActivity implements AdapterView.OnItemS
                 params.put("noOfVisitors", String.valueOf(No_of_Visitors));
                 params.put("vehicleType", VehicleType);
                 params.put("plateNumber", PlateNumber);
-                params.put("licenceNumber", Licence_Number);
+                params.put("licenseNumber", Licence_Number);
                 params.put("parkingNumber", ParkingNumber);
                 params.put("approveParking",ApproveParking);
 

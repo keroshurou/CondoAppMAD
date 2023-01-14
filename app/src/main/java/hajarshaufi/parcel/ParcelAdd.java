@@ -36,7 +36,7 @@ import java.util.Map;
 public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     //Declare EditText & Button
-    private EditText collectorNameEdt, parcelUnitEdt, expressBrandEdt, trackingNumberEdt,
+    private EditText collectorNameEdt, parcelUnitEdt, trackingNumberEdt,
             deliveredDateEdt;
 
     Button submitAddParcel;
@@ -160,15 +160,16 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
             collectorNameEdt.setError("Please enter Collector Name");
         } else if(TextUtils.isEmpty(parcelUnit)){
             parcelUnitEdt.setError("Please enter House Unit Number");
-        } /**else if(TextUtils.isEmpty(expressBrand)) {
-            expressBrandEdt.setError("Please enter Express Brand (Courier Service)");
-        } **/else if(TextUtils.isEmpty(trackingNumber)) {
+        } else if(TextUtils.isEmpty(trackingNumber)) {
             trackingNumberEdt.setError("Please enter Tracking Number");
         } else if(TextUtils.isEmpty(deliveredDate)) {
             deliveredDateEdt.setError("Please enter Delivered Date");
         } else {
             addDataToDatabase(collectorName, parcelUnit, expressBrand, trackingNumber,
                     deliveredDate, collectStatus);
+
+            Intent intentSuccess = new Intent(this, ParcelAddSuccess.class);
+            startActivity(intentSuccess);
         }
     }
 
@@ -177,7 +178,6 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
                                    String collectStatus) {
 
         // url to post our data
-
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(ParcelAdd.this);
 
@@ -199,7 +199,6 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
                 // and setting data to edit text as empty
                 collectorNameEdt.setText("");
                 parcelUnitEdt.setText("");
-                expressBrandEdt.setText("");
                 trackingNumberEdt.setText("");
                 deliveredDateEdt.setText("");
             }
@@ -239,9 +238,6 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
         // below line is to make
         // a json object request.
         queue.add(request);
-
-        Intent intentSuccess = new Intent(this, ParcelAddSuccess.class);
-        startActivity(intentSuccess);
     }
 
 

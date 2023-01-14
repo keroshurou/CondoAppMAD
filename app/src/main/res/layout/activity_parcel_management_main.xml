@@ -34,14 +34,14 @@
         android:id="@+id/parcelPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="284dp"
         android:text="parcel collection"
         android:textAllCaps="true"
         android:textColor="#050505"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,14 +50,13 @@
         android:layout_width="258dp"
         android:layout_height="64dp"
 
-        android:layout_marginTop="404dp"
+        android:layout_marginTop="348dp"
         android:background="@drawable/white_btn"
-        android:text="@string/parcelBtn1"
+        android:text="Add Parcel"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,9 +64,9 @@
         android:id="@+id/parcelReportBtn"
         android:layout_width="258dp"
         android:layout_height="64dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/white_btn"
-        android:text="@string/parcelBtn3"
+        android:text="View &amp; Manage Parcel"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="16sp"
@@ -75,10 +74,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/insertParcelBtn" />
 
+    <!--<Button
+        android:id="@+id/parcelStatus"
+        android:layout_width="258dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/white_btn"
+        android:text="Change Collect Status"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parcelReportBtn" />-->
+
     <ImageView
         android:id="@+id/imageViewParcel"
-        android:layout_width="303dp"
-        android:layout_height="259dp"
+        android:layout_width="254dp"
+        android:layout_height="183dp"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

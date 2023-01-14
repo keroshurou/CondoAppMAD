@@ -12,32 +12,20 @@
 
     <ImageButton
         android:id="@+id/btnBack"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="46dp"
+        android:layout_height="49dp"
         android:background="@drawable/back_button"
         app:layout_constraintBottom_toTopOf="@+id/txtFacilityID"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
-
-    <ImageButton
-        android:id="@+id/btnEditFacility"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/ic_baseline_edit_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/addNew"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/addNew"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="215dp"
+        android:layout_height="39dp"
         android:layout_marginLeft="10dp"
         android:fontFamily="sans-serif"
         android:text="Add New Facility"
@@ -46,10 +34,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <EditText
         android:id="@+id/editTxtFName"
@@ -121,7 +109,7 @@
         android:id="@+id/txtFacilityID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Facility Name"
+        android:text="Facilty Name"
         android:textColor="#050505"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -160,21 +148,11 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTxtFCapacity"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.178" />
 
-    <!--<ImageView
-        android:id="@+id/imageView"
-        android:layout_width="434dp"
-        android:layout_height="747dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnAdd"
-        app:layout_constraintVertical_bias="0.321"
-        app:srcCompat="@drawable/building" />-->
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"

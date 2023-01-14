@@ -29,11 +29,16 @@ import java.util.Map;
 public class AddNewFacility extends AppCompatActivity {
 
     //Declare EditText & Button
-    ImageButton btnBack, btnEditFacility;
+    ImageButton btnBack;
     Button btnAdd;
     private EditText etName, etLocation, etCapacity;
     private String facilityName,location,capacity;
-    String url1 = "http://192.168.146.86/condoapp/";
+    //String url1 = "http://10.131.77.213/";
+    String url1 = "http://192.168.146.86/";
+    //String url1 = "http://10.131.73.139/";
+    //String url1 = "http://192.168.0.8/";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +51,7 @@ public class AddNewFacility extends AppCompatActivity {
         etCapacity = (EditText) findViewById(R.id.editTxtFCapacity);
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnBack = (ImageButton) findViewById(R.id.btnBack);
-        btnEditFacility = (ImageButton) findViewById(R.id.btnEditFacility);
+
 
         //Intent to Facilities Setting Menu
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -54,16 +59,6 @@ public class AddNewFacility extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentBack = new Intent(AddNewFacility.this,
                         FacilitiesSettingMenu.class);
-                startActivity(intentBack);
-            }
-        });
-
-        //Intent to Edit Facility Info
-        btnEditFacility.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentBack = new Intent(AddNewFacility.this,
-                        FacilitiesList.class);
                 startActivity(intentBack);
             }
         });
