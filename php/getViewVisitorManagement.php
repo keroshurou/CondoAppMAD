@@ -5,7 +5,7 @@
 	$database = "condoapp";
 
 	// Connect to the database
-	$conn = mysqli_connect('localhost', 'username', 'password');
+	$conn = mysqli_connect('localhost', 'root', '', 'condoapp');
 	mysqli_select_db($conn, $database);
 
 	$sql="SELECT * FROM `visitor` ";
