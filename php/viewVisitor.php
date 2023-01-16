@@ -3,7 +3,6 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "condoapp";
-
  
 $conn = new mysqli($servername, $username, $password, $dbname);
  
@@ -14,7 +13,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
      // we will search the item for specific id.
      $VisitorName = $_POST['visitorName'];
         //on below line we are selecting the course detail with below id.
-     $stmt = $conn->prepare("SELECT visitorID,visitorName,phoneNumber,checkInDate,checkOutDate,noOfVisitors,vehicleType,plateNumber,licenceNumber FROM visitor WHERE visitorName = ?");
+     $stmt = $conn->prepare("SELECT visitorID,visitorName,phoneNumber,checkInDate,checkOutDate,noOfVisitors,vehicleType,plateNumber,licenseNumber FROM visitor WHERE visitorName = ?");
      $stmt->bind_param("s",$VisitorName);
      $result = $stmt->execute();
    // on below line we are checking if our
@@ -38,7 +37,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
          $response['noOfVisitors'] = $No_of_Visitors;
          $response['vehicleType'] = $VehicleType;
          $response['plateNumber'] = $PlateNumber;
-         $response['licenceNumber'] = $Licence_Number;
+         $response['licenseNumber'] = $Licence_Number;
          
          
      } else{
