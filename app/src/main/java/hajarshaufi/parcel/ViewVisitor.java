@@ -41,7 +41,7 @@ public class ViewVisitor extends AppCompatActivity {
     List<Visitor> visitorList;
 
     EditText edtSearch;
-    String url = "http://192.168.146.86/condoapp/getVisitor.php";
+    String url = "http://10.131.77.18/condoapp/getVisitor.php";
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -157,5 +157,11 @@ public class ViewVisitor extends AppCompatActivity {
         requestQueue.add(request);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(ViewVisitor.this, mainPage.class);
+        startActivity(intent);
+    }
 }
 

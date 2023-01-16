@@ -47,7 +47,7 @@ public class AddNewMaintenance extends AppCompatActivity {
     private DatePickerDialog datePicker;
 
     //String url1 = "http://10.131.77.213/";
-    String url1 = "http://192.168.146.86/";
+    String url1 = "http://10.131.77.18/condoapp/";
     //String url1 = "http://10.131.73.139/";
     //String url1 = "http://192.168.0.8/";
 
@@ -231,4 +231,10 @@ public class AddNewMaintenance extends AppCompatActivity {
         queue.add(request);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(AddNewMaintenance.this, FacilitiesSettingMenu.class);
+        startActivity(i);
+    }
 }

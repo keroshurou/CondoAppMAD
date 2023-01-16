@@ -42,7 +42,7 @@ public class FacilitiesList extends AppCompatActivity {
     ListView listView;
     FacilityAdapter facilityAdapter;
     public static ArrayList<Facility> facilityArrayList = new ArrayList<>();
-    String url1 = "http://192.168.146.86/condoapp/";
+    String url1 = "http://10.131.77.18/condoapp/";
     String url = url1+"get_facility.php";
     Facility facility;
 
@@ -144,9 +144,16 @@ public class FacilitiesList extends AppCompatActivity {
 
         getData();
 
-
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intentBack = new Intent(FacilitiesList.this,
+                FacilitiesSettingMenu.class);
+        startActivity(intentBack);
+    }
 
     private void deleteData(final String facilityID) {
 

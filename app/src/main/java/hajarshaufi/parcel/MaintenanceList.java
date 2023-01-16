@@ -43,7 +43,7 @@ public class MaintenanceList extends AppCompatActivity {
     MaintenanceAdapter maintenanceAdapter;
     public static ArrayList<Maintenance> maintenanceArrayList = new ArrayList<>();
     Maintenance maintenance;
-    String url1 = "http://192.168.146.86/condoapp/";
+    String url1 = "http://10.131.77.18/condoapp/";
     String url = url1+"get_maintenance.php";
 
 
@@ -159,7 +159,16 @@ public class MaintenanceList extends AppCompatActivity {
 
     }
 
-        private void deleteData(final String maintenanceID) {
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intentBack = new Intent(MaintenanceList.this,
+                FacilitiesSettingMenu.class);
+        startActivity(intentBack);
+    }
+
+    private void deleteData(final String maintenanceID) {
 
         StringRequest request = new StringRequest(Request.Method.POST, url1+"delete_maintenance.php",
                 new Response.Listener<String>() {

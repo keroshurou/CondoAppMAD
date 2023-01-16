@@ -1,10 +1,16 @@
 package hajarshaufi.parcel;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 
 import hajarshaufi.parcel.databinding.ActivityMainBinding;
 
@@ -33,22 +39,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /**
-         * binding.displayCard.setOnClickListener(new View.OnClickListener() {
-         *             @Override
-         *             public void onClick(View view) {
-         *                 Intent i = new Intent(MainActivity.this,NotificationActivity.class);
-         *                 startActivity(i);
-         *            }
-         *        });
-         */
-
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intentParcel = new Intent(MainActivity.this, LogoutActivity.class);
-                startActivity(intentParcel);
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+                alertDialog.setTitle("Exit App");
+                alertDialog.setMessage("Do you want to exit");
+                alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(MainActivity.this, LogoutActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                alertDialog.show();
             }
         });
 
@@ -76,5 +87,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentParcel);
             }
         });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+        alertDialog.setTitle("Exit App");
+        alertDialog.setMessage("Do you want to exit");
+        alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(MainActivity.this, LogoutActivity.class);
+                startActivity(intent);
+            }
+        });
+        alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        alertDialog.show();
+
     }
 }

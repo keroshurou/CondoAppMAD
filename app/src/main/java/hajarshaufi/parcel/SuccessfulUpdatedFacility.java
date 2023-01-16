@@ -64,4 +64,12 @@ public class SuccessfulUpdatedFacility extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentBack = new Intent(SuccessfulUpdatedFacility.this,
+                Edit_facility_info.class);
+        startActivity(intentBack);
+    }
 }

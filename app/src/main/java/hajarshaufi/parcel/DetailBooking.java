@@ -45,4 +45,13 @@ public class DetailBooking extends AppCompatActivity {
         tvTime.setText("Booking Time: "+BookingList.bookingArrayList.get(position).getBookingTime());
         tvDate.setText("Booking Date: "+BookingList.bookingArrayList.get(position).getBookingDate());
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intentBack = new Intent(DetailBooking.this,
+                BookingList.class);
+        startActivity(intentBack);
+    }
 }

@@ -1,5 +1,6 @@
 package hajarshaufi.parcel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -26,7 +27,7 @@ public class ViewVisitorManagement extends AppCompatActivity {
     List<Visitor> visitorList;
 
     ViewVisitorManagementAdapter adapterManagement;
-    String url = "http://192.168.146.86/condoapp/getViewVisitorManagement.php";
+    String url = "http://10.131.77.18/condoapp/getViewVisitorManagement.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,5 +96,12 @@ public class ViewVisitorManagement extends AppCompatActivity {
         // a json object request.
         RequestQueue requestQueue= Volley.newRequestQueue(ViewVisitorManagement.this);
         requestQueue.add(requestArray);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(ViewVisitorManagement.this, StaffHomeScreenActivity.class);
+        startActivity(intent);
     }
 }

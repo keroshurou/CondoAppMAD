@@ -54,4 +54,12 @@ public class DetailParcel extends AppCompatActivity {
         txtCollectedDate.setText("Collected Date: "+ParcelListView.parcelArrayList.get(position).getCollectedDate());
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentBack = new Intent(DetailParcel.this,
+                ParcelListView.class);
+        startActivity(intentBack);
+    }
 }

@@ -53,7 +53,7 @@ public class AddNewBooking extends AppCompatActivity {
     ArrayAdapter<String> facilityAdapter;
     RequestQueue requestQueue;
     //String url1 = "http://10.131.77.213/";
-    String url1 = "http://192.168.146.86/";
+    String url1 = "http://10.131.77.18/condoapp/";
     //String url1 = "http://10.131.73.139/";
     //String url1 = "http://192.168.0.8/";
 
@@ -284,5 +284,11 @@ public class AddNewBooking extends AppCompatActivity {
         requestQueue.add(request);
     }*/
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
 
+        Intent i = new Intent(AddNewBooking.this, FacilityBookingMenu.class);
+        startActivity(i);
+    }
 }

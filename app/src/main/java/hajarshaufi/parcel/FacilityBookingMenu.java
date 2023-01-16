@@ -50,7 +50,12 @@ public class FacilityBookingMenu extends AppCompatActivity {
                 startActivity(intentAdd);
             }
         });
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(FacilityBookingMenu.this, MainActivity.class);
+        startActivity(intent);
     }
 }

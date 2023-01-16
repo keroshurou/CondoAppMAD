@@ -18,4 +18,11 @@ public class SuccessfullyDeleted extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), ViewVisitor.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), ViewVisitor.class);
+        startActivity(intent);
+    }
 }

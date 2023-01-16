@@ -26,7 +26,7 @@ public class DeleteParcel extends AppCompatActivity {
     TextView txtView2, txtView;
     private int position;
 
-    String url = "http://192.168.146.86/condoapp/deleteParcel.php";
+    String url = "http://10.131.77.18/condoapp/deleteParcel.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

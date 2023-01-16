@@ -66,4 +66,12 @@ public class Successful_Booked_Facility extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentBack = new Intent(Successful_Booked_Facility.this,
+                AddNewBooking.class);
+        startActivity(intentBack);
+    }
 }

@@ -54,4 +54,13 @@ public class Successful_Saved_Maintenance extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intentBack = new Intent(Successful_Saved_Maintenance.this,
+                AddNewMaintenance.class);
+        startActivity(intentBack);
+    }
 }

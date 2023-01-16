@@ -52,4 +52,12 @@ public class ResidentDetailParcel extends AppCompatActivity {
         txtCollectStatus.setText("Collect Status: "+ResidentParcelListView.residentParcelArrayList.get(position).getCollectStatus());
         txtCollectedDate.setText("Collected Date: "+ResidentParcelListView.residentParcelArrayList.get(position).getCollectedDate());
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentBack = new Intent(ResidentDetailParcel.this,
+                ResidentParcelListView.class);
+        startActivity(intentBack);
+    }
 }

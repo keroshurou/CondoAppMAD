@@ -20,4 +20,11 @@ public class SuccessfullyAdded extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), AddVisitor.class);
+        startActivity(intent);
+    }
 }

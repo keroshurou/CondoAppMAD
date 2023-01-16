@@ -33,6 +33,7 @@ public class VisitorAdapter extends RecyclerView.Adapter<VisitorAdapter.ViewHold
     Context context;
     List<Visitor> visitor_list;
 
+    String url = "http://10.131.77.18/condoapp/deleteVisitor.php";
 
 
     public VisitorAdapter(Context context, List<Visitor> visitor_list) {
@@ -113,7 +114,7 @@ public class VisitorAdapter extends RecyclerView.Adapter<VisitorAdapter.ViewHold
     }
 
     private void deleteData(final String VisitorName){
-        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.16/condoapp/deleteVisitor.php",
+        StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

@@ -28,7 +28,7 @@ public class Edit_facility_info extends AppCompatActivity {
     EditText etID, etName, etLocation, etCapacity;
 
     private int position;
-    String url1 = "http://192.168.146.86/condoapp/";
+    String url1 = "http://10.131.77.18/condoapp/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +64,14 @@ public class Edit_facility_info extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intentBack = new Intent(Edit_facility_info.this,
+                AddNewFacility.class);
+        startActivity(intentBack);
+    }
 
     public void fnUpdate(View view){
         final String facilityName = etName.getText().toString().trim();

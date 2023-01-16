@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -36,7 +37,7 @@ public class AddVisitor extends AppCompatActivity implements AdapterView.OnItemS
     String[] vehicleType = {"NONE", "MotorCycle", "Car"};
     String managementApproval="Pending";
     String parkingBooking="None";
-    String url = "http://192.168.146.86/condoapp/addVisitor.php";
+    String url = "http://10.131.77.18/condoapp/addVisitor.php";
 
     Spinner edtVehicleType;
     DatePickerDialog.OnDateSetListener setListener;
@@ -122,6 +123,7 @@ public class AddVisitor extends AppCompatActivity implements AdapterView.OnItemS
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         edtVehicleType.setAdapter(adapter);
         edtVehicleType.setOnItemSelectedListener(this);
+
     }
 
     public void GetVisitor() {
@@ -258,6 +260,14 @@ public class AddVisitor extends AppCompatActivity implements AdapterView.OnItemS
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent = new Intent(AddVisitor.this, mainPage.class);
+        startActivity(intent);
     }
 }
 

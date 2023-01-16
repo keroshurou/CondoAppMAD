@@ -41,9 +41,9 @@ public class ParcelListView extends AppCompatActivity {
     ListView listView;
     ParcelAdapter parcelAdapter;
     public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
-    String url = "http://192.168.146.86/condoapp/fetchDataParcel.php";
-    String url1 = "http://192.168.146.86/condoapp/deleteParcel.php";
-    String url3 = "http://192.168.146.86/condoapp/searchParcel.php";
+    String url = "http://10.131.77.18/condoapp/fetchDataParcel.php";
+    String url1 = "http://10.131.77.18/condoapp/deleteParcel.php";
+    String url3 = "http://10.131.77.18/condoapp/searchParcel.php";
     Parcel parcel;
     ImageButton btnSearch;
     EditText edtSearchBar;
@@ -330,4 +330,12 @@ public class ParcelListView extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intentBack = new Intent(ParcelListView.this,
+                ParcelManagementMain.class);
+        startActivity(intentBack);
+    }
 }

@@ -64,4 +64,11 @@ public class FacilitiesSettingMenu extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(FacilitiesSettingMenu.this, StaffHomeScreenActivity.class);
+        startActivity(intent);
+    }
 }

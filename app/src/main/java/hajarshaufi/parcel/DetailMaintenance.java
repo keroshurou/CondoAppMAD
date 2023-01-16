@@ -48,4 +48,12 @@ public class DetailMaintenance extends AppCompatActivity {
         tvReason.setText("Maintenance Reason: "+MaintenanceList.maintenanceArrayList.get(position).getMaintenanceReason());
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentBack = new Intent(DetailMaintenance.this,
+                MaintenanceList.class);
+        startActivity(intentBack);
+    }
 }

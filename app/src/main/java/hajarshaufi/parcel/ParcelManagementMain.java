@@ -59,4 +59,10 @@ public class ParcelManagementMain extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(ParcelManagementMain.this, StaffHomeScreenActivity.class);
+        startActivity(intent);
+    }
 }

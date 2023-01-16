@@ -25,7 +25,7 @@ public class Rejected extends AppCompatActivity {
     private String VisitorName,ParkingNumber,ApproveParking;
     Visitor visitor;
     List<Visitor> visitorList;
-    String url = "http://192.168.146.86/condoapp/Approve.php";
+    String url = "http://10.131.77.18/condoapp/Approve.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,5 +83,14 @@ public class Rejected extends AppCompatActivity {
     public void fnDoneUpdate(View view) {
         Intent intentReject = new Intent(Rejected.this, ViewVisitorManagement.class);
         startActivity(intentReject);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intentBack = new Intent(Rejected.this,
+                ViewVisitorManagement.class);
+        startActivity(intentBack);
     }
 }

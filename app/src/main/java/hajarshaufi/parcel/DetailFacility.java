@@ -45,4 +45,12 @@ public class DetailFacility extends AppCompatActivity {
         tvCapacity.setText("Capacity: "+FacilitiesList.facilityArrayList.get(position).getCapacity());
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentBack = new Intent(DetailFacility.this,
+                FacilitiesList.class);
+        startActivity(intentBack);
+    }
 }

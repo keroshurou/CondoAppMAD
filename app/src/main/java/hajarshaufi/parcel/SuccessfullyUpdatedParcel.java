@@ -37,4 +37,11 @@ public class SuccessfullyUpdatedParcel extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentView = new Intent(SuccessfullyUpdatedParcel.this, ParcelListView.class);
+        startActivity(intentView);
+    }
 }

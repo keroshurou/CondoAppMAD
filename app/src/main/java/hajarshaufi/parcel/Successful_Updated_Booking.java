@@ -54,4 +54,12 @@ public class Successful_Updated_Booking extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentBack = new Intent(Successful_Updated_Booking.this,
+                Edit_booking_info.class);
+        startActivity(intentBack);
+    }
 }

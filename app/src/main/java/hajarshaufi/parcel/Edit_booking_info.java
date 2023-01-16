@@ -48,7 +48,7 @@ public class Edit_booking_info extends AppCompatActivity {
     ArrayList<String> facilityList = new ArrayList<>();
     ArrayAdapter<String> facilityAdapter;
     RequestQueue requestQueue;
-    String url1 = "http://192.168.146.86/condoapp/";
+    String url1 = "http://10.131.77.18/condoapp/";
 
     private int position;
 
@@ -145,6 +145,15 @@ public class Edit_booking_info extends AppCompatActivity {
             }
         });
         requestQueue.add(jsonObjectRequest);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intentBack = new Intent(Edit_booking_info.this,
+                BookingList.class);
+        startActivity(intentBack);
     }
 
     public void fnUpdateBooking(View view) {

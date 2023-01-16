@@ -2,6 +2,7 @@ package hajarshaufi.parcel;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,9 +39,12 @@ public class ApproveVisitorParking extends AppCompatActivity {
     private String VisitorName, VehicleType ,ParkingNumber,ApproveParking;
 
     String ApproveStatus="Approved";
-    String url = "http://192.168.146.86/condoapp/viewVisitor.php";
-    String url1 = "http://1192.168.146.86/condoapp/getParkingDetails.php";
-    String url2 = "http://192.168.146.86/condoapp/Approve.php";
+
+    // url to post our data
+    String url = "http://10.131.77.18/condoapp/viewVisitor.php";
+    String url1 = "http://10.131.77.18/condoapp/getParkingDetails.php";
+    String url3 = "http://10.131.77.18/condoapp/Approve.php";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +101,6 @@ public class ApproveVisitorParking extends AppCompatActivity {
     }
 
     public void getVisitorInformation(String visitorName) {
-
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(ApproveVisitorParking.this);
@@ -162,7 +165,6 @@ public class ApproveVisitorParking extends AppCompatActivity {
 
     public void getParkingDetails() {
 
-
         // on below line we are calling a string
         // request method to post the data to our API
         // in this we are calling a post method.
@@ -183,65 +185,78 @@ public class ApproveVisitorParking extends AppCompatActivity {
                             Button mo1;
                             mo1=findViewById(R.id.btnMotor1);
                             mo1.setEnabled(false);
+                            mo1.setBackgroundColor(Color.GRAY);
                         }
                         boolean motor2 = ParkingLot.contains("A1 M101");
                         if (motor2){
                             btnMotor2.setEnabled(false);
+                            btnMotor2.setBackgroundColor(Color.GRAY);
                         }
                         boolean motor3 = ParkingLot.contains("A1 M102");
                         if (motor3){
                             btnMotor3.setEnabled(false);
+                            btnMotor3.setBackgroundColor(Color.GRAY);
                         }
                         boolean motor4 = ParkingLot.contains("A1 M103");
                         if (motor4){
                             btnMotor4.setEnabled(false);
+                            btnMotor4.setBackgroundColor(Color.GRAY);
                         }
                         boolean motor5 = ParkingLot.contains("A1 M104");
                         if (motor5){
                             btnMotor5.setEnabled(false);
+                            btnMotor5.setBackgroundColor(Color.GRAY);
                         }
                         boolean car1 = ParkingLot.contains("A1 C100");
                         if (car1){
                             btnCar1.setEnabled(false);
+                            btnCar1.setBackgroundColor(Color.GRAY);
                         }
                         boolean car2 = ParkingLot.contains("A1 C101");
                         if (car2){
                             btnCar2.setEnabled(false);
+                            btnCar2.setBackgroundColor(Color.GRAY);
                         }
                         boolean car3 = ParkingLot.contains("A1 C102");
                         if (car3){
                             btnCar3.setEnabled(false);
+                            btnCar3.setBackgroundColor(Color.GRAY);
                         }
                         boolean car4 = ParkingLot.contains("A1 C103");
                         if (car4){
                             btnCar4.setEnabled(false);
+                            btnCar4.setBackgroundColor(Color.GRAY);
                         }
                         boolean car5 = ParkingLot.contains("A1 C104");
                         if (car5){
                             btnCar5.setEnabled(false);
+                            btnCar5.setBackgroundColor(Color.GRAY);
                         }
                         boolean car6 = ParkingLot.contains("A1 C105");
                         if (car6){
                             btnCar6.setEnabled(false);
+                            btnCar6.setBackgroundColor(Color.GRAY);
                         }
                         boolean car7 = ParkingLot.contains("A1 C106");
                         if (car7){
                             btnCar7.setEnabled(false);
+                            btnCar7.setBackgroundColor(Color.GRAY);
                         }
                         boolean car8 = ParkingLot.contains("A1 C107");
                         if (car8){
                             btnCar8.setEnabled(false);
+                            btnCar8.setBackgroundColor(Color.GRAY);
                         }
                         boolean car9 = ParkingLot.contains("A1 C108");
                         if (car9){
                             btnCar9.setEnabled(false);
+                            btnCar9.setBackgroundColor(Color.GRAY);
                         }
                         boolean car10 = ParkingLot.contains("A1 C109");
                         if (car10){
                             btnCar10.setEnabled(false);
+                            btnCar10.setBackgroundColor(Color.GRAY);
                         }
-
-
 
                         // on below line we are displaying
                         // a success toast message.
@@ -278,7 +293,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         progressDialog.setMessage("Updating...");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, url3, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(ApproveVisitorParking.this, response, Toast.LENGTH_SHORT).show();
@@ -310,6 +325,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 M100");
         M1 = findViewById(R.id.btnMotor1);
         M1.setEnabled(false);
+        M1.setBackgroundColor(Color.GRAY);
     }
 
     public void fnMotor3(View view) {
@@ -317,6 +333,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 M102");
         M3 = findViewById(R.id.btnMotor3);
         M3.setEnabled(false);
+        M3.setBackgroundColor(Color.GRAY);
     }
 
     public void fnCar4(View view) {
@@ -324,6 +341,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C103");
         C4 = findViewById(R.id.btnCar4);
         C4.setEnabled(false);
+        C4.setBackgroundColor(Color.GRAY);
     }
 
     public void fnCar9(View view) {
@@ -331,6 +349,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C109");
         C9 = findViewById(R.id.btnCar9);
         C9.setEnabled(false);
+        C9.setBackgroundColor(Color.GRAY);
     }
 
 
@@ -339,6 +358,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C107");
         C8 = findViewById(R.id.btnCar8);
         C8.setEnabled(false);
+        C8.setBackgroundColor(Color.GRAY);
     }
 
     public void fnCar10(View view) {
@@ -346,6 +366,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C108");
         C10 = findViewById(R.id.btnCar10);
         C10.setEnabled(false);
+        C10.setBackgroundColor(Color.GRAY);
     }
 
 
@@ -354,6 +375,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C104");
         C5 = findViewById(R.id.btnCar5);
         C5.setEnabled(false);
+        C5.setBackgroundColor(Color.GRAY);
     }
 
     public void fnCar7(View view) {
@@ -361,6 +383,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C106");
         C7 = findViewById(R.id.btnCar7);
         C7.setEnabled(false);
+        C7.setBackgroundColor(Color.GRAY);
     }
 
     public void fnCar6(View view) {
@@ -368,6 +391,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C105");
         C6 = findViewById(R.id.btnCar6);
         C6.setEnabled(false);
+        C6.setBackgroundColor(Color.GRAY);
     }
 
     public void fnCar2(View view) {
@@ -375,6 +399,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C101");
         C2 = findViewById(R.id.btnCar2);
         C2.setEnabled(false);
+        C2.setBackgroundColor(Color.GRAY);
     }
 
 
@@ -383,6 +408,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C100");
         C1 = findViewById(R.id.btnCar1);
         C1.setEnabled(false);
+        C1.setBackgroundColor(Color.GRAY);
     }
 
     public void fnCar3(View view) {
@@ -390,6 +416,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 C102");
         C3 = findViewById(R.id.btnCar3);
         C3.setEnabled(false);
+        C3.setBackgroundColor(Color.GRAY);
     }
 
     public void fnMotor4(View view) {
@@ -397,6 +424,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 M103");
         M4 = findViewById(R.id.btnMotor4);
         M4.setEnabled(false);
+        M4.setBackgroundColor(Color.GRAY);
     }
 
 
@@ -405,6 +433,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 M104");
         M5 = findViewById(R.id.btnMotor5);
         M5.setEnabled(false);
+        M5.setBackgroundColor(Color.GRAY);
     }
 
 
@@ -413,10 +442,19 @@ public class ApproveVisitorParking extends AppCompatActivity {
         txtParkingLot.setText("A1 M101");
         M2 = findViewById(R.id.btnMotor2);
         M2.setEnabled(false);
+        M2.setBackgroundColor(Color.GRAY);
     }
 
     public void fnBackParking(View view) {
         Intent intentSuccess = new Intent(ApproveVisitorParking.this, ViewVisitorManagement.class);
         startActivity(intentSuccess);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent i = new Intent(ApproveVisitorParking.this, ViewVisitorManagement.class);
+        startActivity(i);
     }
 }

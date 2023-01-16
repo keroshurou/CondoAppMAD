@@ -45,8 +45,8 @@ public class EditVisitor extends AppCompatActivity implements AdapterView.OnItem
 
     String managementApproval = "Pending";
     String parkingLot = "None";
-    String url = "http://192.168.146.86/condoapp/viewVisitor.php";
-    String url1 = "http://192.168.146.86/condoapp/updateVisitor.php";
+    String url = "http://10.131.77.18/condoapp/viewVisitor.php";
+    String url1 = "http://10.131.77.18/condoapp/updateVisitor.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -170,6 +170,14 @@ public class EditVisitor extends AppCompatActivity implements AdapterView.OnItem
         vehicleTypeSpin.setAdapter(adapter);
         vehicleTypeSpin.setOnItemSelectedListener(this);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intentBack = new Intent(EditVisitor.this, ViewVisitor.class);
+        startActivity(intentBack);
     }
 
     public void getVisitorInformation(String visitorName){

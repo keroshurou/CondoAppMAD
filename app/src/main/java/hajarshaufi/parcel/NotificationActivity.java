@@ -2,6 +2,7 @@ package hajarshaufi.parcel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -33,7 +34,10 @@ public class NotificationActivity extends AppCompatActivity {
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+
+                Intent intentBack = new Intent(NotificationActivity.this,
+                        MainActivity.class);
+                startActivity(intentBack);
             }
         });
 
@@ -57,5 +61,13 @@ public class NotificationActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentBack = new Intent(NotificationActivity.this,
+                MainActivity.class);
+        startActivity(intentBack);
     }
 }
