@@ -33,7 +33,7 @@ public class ResidentParcelListView extends AppCompatActivity {
     ListView residentListView;
     ParcelAdapter residentParcelAdapter;
     public static ArrayList<Parcel> residentParcelArrayList = new ArrayList<>();
-    String url = "http://10.131.77.18/condoapp/fetchDataParcelResident.php";
+    String url = "http://192.168.26.86/condoapp/fetchDataParcelResident.php";
     Parcel parcel;
 
     @Override

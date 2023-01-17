@@ -2,6 +2,7 @@ package hajarshaufi.parcel;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -40,10 +41,11 @@ public class ParcelListView extends AppCompatActivity {
 
     ListView listView;
     ParcelAdapter parcelAdapter;
+    SwipeRefreshLayout swipeRefresh;
     public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
-    String url = "http://10.131.77.18/condoapp/fetchDataParcel.php";
-    String url1 = "http://10.131.77.18/condoapp/deleteParcel.php";
-    String url3 = "http://10.131.77.18/condoapp/searchParcel.php";
+    String url = "http://192.168.26.86/condoapp/fetchDataParcel.php";
+    String url1 = "http://192.168.26.86/condoapp/deleteParcel.php";
+    String url3 = "http://192.168.26.86/condoapp/searchParcel.php";
     Parcel parcel;
     ImageButton btnSearch;
     EditText edtSearchBar;
@@ -54,7 +56,7 @@ public class ParcelListView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parcel_list_view);
 
-
+        swipeRefresh = (SwipeRefreshLayout)findViewById(R.id.swipeRefreshLayout);
         listView = findViewById(R.id.parcelListView);
         parcelAdapter = new ParcelAdapter(this, parcelArrayList);
         listView.setAdapter(parcelAdapter);
@@ -109,6 +111,12 @@ public class ParcelListView extends AppCompatActivity {
                                         overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                                     }
                                 });
+                                cancel.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        customDialog.dismiss();
+                                    }
+                                });
                                 break;
                         }
 
@@ -134,6 +142,16 @@ public class ParcelListView extends AppCompatActivity {
         });
 
         getData();
+
+        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Intent intentBack = new Intent(ParcelListView.this,
+                        ParcelListView.class);
+                startActivity(intentBack);
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+            }
+        });
 
         /*edtSearchBar = findViewById(R.id.searchBar);
         btnSearch = findViewById(R.id.imageButton);

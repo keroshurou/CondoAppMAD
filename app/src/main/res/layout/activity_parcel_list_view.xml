@@ -58,26 +58,42 @@
         app:layout_constraintStart_toEndOf="@+id/btnBack"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/parcelListView"
-        android:layout_width="302dp"
-        android:layout_height="470dp"
-        android:layout_below="@+id/searchBar"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="54dp"
-        android:background="@drawable/white_column"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp"
+        tools:context=".MaintenanceList">
 
-    <EditText
+        <ListView
+            android:id="@+id/parcelListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/white_column"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.464" />
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!--<EditText
         android:id="@+id/searchBar"
         android:layout_width="240dp"
         android:layout_height="50dp"
@@ -93,11 +109,11 @@
         android:ems="10"
         android:hint="Search Bar (By Name)"
         android:padding="10dp"
-        android:textSize="16sp">
+        android:textSize="16sp">-->
 
-    </EditText>
+    <!--</EditText>-->
 
-    <ImageButton
+    <!--<ImageButton
         android:id="@+id/imageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -107,6 +123,6 @@
         android:layout_marginEnd="25dp"
         android:background="@drawable/white_column"
         android:scaleType="center"
-        app:srcCompat="@drawable/ic_baseline_search" />
+        app:srcCompat="@drawable/ic_baseline_search" />-->
 
 </RelativeLayout>

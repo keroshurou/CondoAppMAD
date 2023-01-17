@@ -40,7 +40,7 @@ public class EditParcelDetails extends AppCompatActivity implements AdapterView.
     private int position;
     private DatePickerDialog datePicker;
     private Spinner courierSpinner, statusSpinner;
-    String url = "http://10.131.77.18/condoapp/updateParcel.php";
+    String url = "http://192.168.26.86/condoapp/updateParcel.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

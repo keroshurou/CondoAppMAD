@@ -16,9 +16,9 @@ import hajarshaufi.parcel.databinding.ActivityNotificationBinding;
 public class NotificationActivity extends AppCompatActivity {
 
     private ActivityNotificationBinding binding;
-    private String[] head = {"Water Disruption","Electric Disruption","Overdue Maintenance","Parcel Collect"};
+    private String[] head = {"Water Disruption","Electric Disruption","Overdue Maintenance"};
     private String[] sub = {"Water Disruption On___","Electric Disruption On___",
-            "Overdue Maintenance On___","Parcel Collect On_"};
+            "Overdue Maintenance On___"};
     private int counter = 0;
 
     @Override

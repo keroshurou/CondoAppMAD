@@ -40,7 +40,7 @@ public class ParcelChangeStatus extends AppCompatActivity implements AdapterView
     private int position;
     private DatePickerDialog datePicker;
     private Spinner statusSpinner;
-    String url = "http://192.168.146.86/condoapp/changeStatus.php";
+    String url = "http://192.168.26.86/condoapp/updateParcel.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,6 +122,11 @@ public class ParcelChangeStatus extends AppCompatActivity implements AdapterView
     public void fnUpdate(View view){
 
         final String parcelID = tvParcelID.getText().toString().trim();
+        final String collectorName = tvCollectorName.getText().toString().trim();
+        final String unitNumber = tvUnitNumber.getText().toString().trim();
+        final String trackingNumber = tvTrackingNumber.getText().toString().trim();
+        final String expressBrand = tvExpressBrand.getText().toString().trim();
+        final String deliveredDate = tvDeliveredDate.getText().toString().trim();
         final String collectStatus = statusSpinner.getSelectedItem().toString().trim();
         final String collectedDate = edtUpCollectedDate.getText().toString().trim();
 
@@ -160,6 +165,11 @@ public class ParcelChangeStatus extends AppCompatActivity implements AdapterView
                 Map<String, String> params = new HashMap<String, String>();
 
                 params.put("parcelID", parcelID);
+                params.put("collectorName", collectorName);
+                params.put("parcelUnit", unitNumber);
+                params.put("expressBrand", expressBrand);
+                params.put("trackingNumber", trackingNumber);
+                params.put("deliveredDate", deliveredDate);
                 params.put("collectStatus", collectStatus);
                 params.put("collectedDate", collectedDate);
 

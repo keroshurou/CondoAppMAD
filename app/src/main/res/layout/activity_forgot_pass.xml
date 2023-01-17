@@ -144,7 +144,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight=".3"
                 android:gravity="end"
-                android:text="Already reseted?"
+                android:text="Already reset?"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:textStyle="bold"
