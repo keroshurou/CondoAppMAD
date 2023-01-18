@@ -53,6 +53,15 @@ public class Successful_Saved_Maintenance extends AppCompatActivity {
                 startActivity(intentBack);
             }
         });
+
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentBack = new Intent(Successful_Saved_Maintenance.this,
+                        StaffHomeScreenActivity.class);
+                startActivity(intentBack);
+            }
+        });
     }
 
     @Override

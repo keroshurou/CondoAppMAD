@@ -65,6 +65,15 @@ public class Successful_Booked_Facility extends AppCompatActivity {
                 startActivity(intentBack);
             }
         });
+
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentBack = new Intent(Successful_Booked_Facility.this,
+                        MainActivity.class);
+                startActivity(intentBack);
+            }
+        });
     }
 
     @Override

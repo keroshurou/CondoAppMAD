@@ -76,6 +76,15 @@ public class SuccessfulAddedFacility extends AppCompatActivity {
             }
         });
 
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentBack = new Intent(SuccessfulAddedFacility.this,
+                        StaffHomeScreenActivity.class);
+                startActivity(intentBack);
+            }
+        });
+
     }
 
     @Override

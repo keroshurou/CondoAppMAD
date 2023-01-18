@@ -47,7 +47,7 @@ public class AddNewMaintenance extends AppCompatActivity {
     private DatePickerDialog datePicker;
 
     //String url1 = "http://10.131.77.213/";
-    String url1 = "http://192.168.26.86/condoapp/";
+    String url1 = "http://10.131.75.188/condoapp/";
     //String url1 = "http://10.131.73.139/";
     //String url1 = "http://192.168.0.8/";
 

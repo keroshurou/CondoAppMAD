@@ -18,8 +18,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="48dp"
         android:text="Visitor Registeration"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -301,13 +301,12 @@
         android:id="@+id/btnHome"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/home_btn"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/back_button"
         android:contentDescription="@string/app_name"
         android:onClick="fnBack"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="28dp" />
 
     <Button
         android:id="@+id/btnEdit"

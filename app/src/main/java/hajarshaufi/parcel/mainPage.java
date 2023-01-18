@@ -19,7 +19,7 @@ public class mainPage extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mainPage.this, StaffHomeScreenActivity.class);
+                Intent intent = new Intent(mainPage.this, MainActivity.class);
                 startActivity(intent);
             }
         });

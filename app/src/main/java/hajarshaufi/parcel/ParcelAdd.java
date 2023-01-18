@@ -49,7 +49,7 @@ public class ParcelAdd extends AppCompatActivity implements AdapterView.OnItemSe
     private Spinner courierSpinner;
 
     String availableStatus = "Available";
-    String url = "http://192.168.26.86/condoapp/insertParcel.php";
+    String url = "http://10.131.75.188/condoapp/insertParcel.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

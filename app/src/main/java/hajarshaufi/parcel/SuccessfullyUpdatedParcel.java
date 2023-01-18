@@ -24,7 +24,7 @@ public class SuccessfullyUpdatedParcel extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentHome = new Intent(SuccessfullyUpdatedParcel.this, ParcelManagementMain.class);
+                Intent intentHome = new Intent(SuccessfullyUpdatedParcel.this, StaffHomeScreenActivity.class);
                 startActivity(intentHome);
             }
         });
