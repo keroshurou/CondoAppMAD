@@ -35,6 +35,10 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Written by Qiao Hui
+ */
+
 public class AddNewBooking extends AppCompatActivity {
 
     Spinner spinnerFacility, spinnerTime;
