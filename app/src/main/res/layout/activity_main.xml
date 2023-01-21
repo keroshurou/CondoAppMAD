@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_drawer_layout"
+    android:padding="20dp"
+    tools:ignore="HardcodedText"
+    tools:context=".MainActivity">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,7 +17,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/btnNotification"
         android:layout_width="50dp"
         android:layout_height="50sp"
@@ -21,15 +32,15 @@
         android:layout_marginTop="10dp"
         android:layout_width="50dp"
         android:layout_height="50sp"
-        android:src="@drawable/ic_baseline_logout_24" />
+        android:src="@drawable/ic_baseline_logout_24" />-->
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btnNotification"
+
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="-3dp">
 
         <LinearLayout
@@ -44,7 +55,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="170sp"
                 android:layout_margin="5dp"
-
                 app:cardCornerRadius="15sp">
 
                 <LinearLayout
@@ -106,6 +116,7 @@
                         android:textAllCaps="true"
                         android:background="?android:attr/selectableItemBackground"
                         android:textColor="@color/black"
+                        android:padding="20dp"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -144,6 +155,7 @@
                         android:gravity="center"
                         android:text="Visitor Registration"
                         android:textAllCaps="true"
+                        android:padding="20dp"
                         android:background="?android:attr/selectableItemBackground"
                         android:textColor="@color/black"
                         android:textSize="16sp"
@@ -198,3 +210,12 @@
     </ScrollView>
 
 </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
