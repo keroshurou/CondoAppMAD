@@ -11,7 +11,8 @@ $facilityName = $_POST['facilityName'];
 $bookingTime = $_POST['bookingTime'];
 $bookingDate = $_POST['bookingDate'];
 
-$sql = "UPDATE booking SET facilityName = '$facilityName',bookingTime = '$bookingTime',bookingDate = '$bookingDate' WHERE bookingID = '$bookingID'";
+$sql = "UPDATE booking SET facilityName = '$facilityName',bookingTime = '$bookingTime',
+bookingDate = '$bookingDate' WHERE bookingID = '$bookingID'";
 
 $result = mysqli_query($conn, $sql);
 

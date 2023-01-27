@@ -29,7 +29,7 @@ public class ForgotPassActivity extends AppCompatActivity {
     private ActivityForgotPassBinding binding;
     private ActivityDialogueBinding dialogueBinding;
     private ActivityDialogueCancelBinding cancelBinding;
-    String url = "http://192.168.1.113/condoapp/forgot.php";
+    String url = "http://192.168.59.86/condoapp/forgot.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

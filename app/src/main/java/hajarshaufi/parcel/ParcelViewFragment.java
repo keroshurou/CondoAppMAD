@@ -40,8 +40,8 @@ public class ParcelViewFragment extends Fragment {
     ListView listView;
     ParcelAdapter parcelAdapter;
     public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
-    String url = "http://192.168.0.16/condoapp/fetchDataParcel.php";
-    String url1 = "http://192.168.0.16/condoapp/deleteParcel.php";
+    String url = "http://192.168.59.86/condoapp/fetchDataParcel.php";
+    String url1 = "http://192.168.59.86/condoapp/deleteParcel.php";
     Parcel parcel;
 
     @Override

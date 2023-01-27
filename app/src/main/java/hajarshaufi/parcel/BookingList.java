@@ -42,7 +42,7 @@ public class BookingList extends AppCompatActivity {
     ListView listView;
     BookingAdapter bookingAdapter;
     public static ArrayList<Booking> bookingArrayList = new ArrayList<>();
-    String url1 = "http://192.168.1.113/condoapp/";
+    String url1 = "http://192.168.59.86/condoapp/";
     String url = url1+"get_booking.php";
     Booking booking;
 

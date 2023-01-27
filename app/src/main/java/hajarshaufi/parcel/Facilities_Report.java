@@ -30,7 +30,7 @@ public class Facilities_Report extends AppCompatActivity {
     TextView txtReport;
     ImageButton btnBack,btnSearch;
     EditText edSearch;
-    String url = "http://192.168.1.113/condoapp/booking_report.php";
+    String url = "http://192.168.59.86/condoapp/booking_report.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

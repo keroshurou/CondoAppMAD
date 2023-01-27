@@ -26,7 +26,7 @@ import hajarshaufi.parcel.databinding.ActivityStaffLoginBinding;
 public class StaffLoginActivity extends AppCompatActivity {
 
     private ActivityStaffLoginBinding binding;
-    String url = "http://192.168.1.113/condoapp/stafflogin.php";
+    String url = "http://192.168.59.86/condoapp/stafflogin.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

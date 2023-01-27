@@ -43,7 +43,7 @@ public class ParcelView extends AppCompatActivity {
             public void onClick(View view) {
                 String data = searchBarEdt.getText().toString();
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url = "http://10.131.77.18/condoapp/getAllParcel.php";
+                String url = "http://192.168.59.86/condoapp/getAllParcel.php";
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {

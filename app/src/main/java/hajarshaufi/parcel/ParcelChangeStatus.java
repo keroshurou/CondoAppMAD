@@ -40,7 +40,7 @@ public class ParcelChangeStatus extends AppCompatActivity implements AdapterView
     private int position;
     private DatePickerDialog datePicker;
     private Spinner statusSpinner;
-    String url = "http://192.168.26.86/condoapp/updateParcel.php";
+    String url = "http://192.168.59.86/condoapp/updateParcel.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

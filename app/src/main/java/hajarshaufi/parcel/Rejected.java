@@ -25,7 +25,7 @@ public class Rejected extends AppCompatActivity {
     private String VisitorName,ParkingNumber,ApproveParking;
     Visitor visitor;
     List<Visitor> visitorList;
-    String url = "http://192.168.1.113/condoapp/Approve.php";
+    String url = "http://192.168.59.86/condoapp/Approve.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

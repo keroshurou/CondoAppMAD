@@ -42,7 +42,7 @@ public class FacilitiesList extends AppCompatActivity {
     ListView listView;
     FacilityAdapter facilityAdapter;
     public static ArrayList<Facility> facilityArrayList = new ArrayList<>();
-    String url1 = "http://192.168.1.113/condoapp/";
+    String url1 = "http://192.168.59.86/condoapp/";
     String url = url1+"get_facility.php";
     Facility facility;
 

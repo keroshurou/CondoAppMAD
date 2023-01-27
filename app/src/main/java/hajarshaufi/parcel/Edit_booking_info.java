@@ -48,7 +48,7 @@ public class Edit_booking_info extends AppCompatActivity {
     ArrayList<String> facilityList = new ArrayList<>();
     ArrayAdapter<String> facilityAdapter;
     RequestQueue requestQueue;
-    String url1 = "http://192.168.1.113/condoapp/";
+    String url1 = "http://192.168.59.86/condoapp/";
 
     private int position;
 

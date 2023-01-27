@@ -34,13 +34,13 @@ if (mysqli_num_rows($result) < 1) {
             $mail->isSMTP();                                           
             $mail->Host       = 'smtp.gmail.com';                    
             $mail->SMTPAuth   = true;                                 
-            $mail->Username   = 'isratjahan335599@gmail.com';                
-            $mail->Password   = 'hyyhebpvaggeigvr';                             
+            $mail->Username   = 'hajarshaufi@gmail.com';                
+            $mail->Password   = 'yikyymiznwltpysm';                             
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          
             $mail->Port       = 465;                                   
 
             //Recipients
-            $mail->setFrom('isratjahan335599@gmail.com', 'No-reply');
+            $mail->setFrom('hajarshaufi@gmail.com', 'No-reply');
             $mail->addAddress($email);               
             $mail->addReplyTo('no-reply@gmail.com', 'no-reply');
         

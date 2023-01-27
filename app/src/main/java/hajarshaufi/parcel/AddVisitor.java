@@ -37,7 +37,7 @@ public class AddVisitor extends AppCompatActivity implements AdapterView.OnItemS
     String[] vehicleType = {"NONE", "MotorCycle", "Car"};
     String managementApproval="Pending";
     String parkingBooking="None";
-    String url = "http://192.168.1.113/condoapp/addVisitor.php";
+    String url = "http://192.168.59.86/condoapp/addVisitor.php";
 
     Spinner edtVehicleType;
     DatePickerDialog.OnDateSetListener setListener;

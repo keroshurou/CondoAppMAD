@@ -45,8 +45,8 @@ public class EditVisitor extends AppCompatActivity implements AdapterView.OnItem
 
     String managementApproval = "Pending";
     String parkingLot = "None";
-    String url = "http://192.168.1.113/condoapp/viewVisitor.php";
-    String url1 = "http://192.168.1.113/condoapp/updateVisitor.php";
+    String url = "http://192.168.59.86/condoapp/viewVisitor.php";
+    String url1 = "http://192.168.59.86/condoapp/updateVisitor.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

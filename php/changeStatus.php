@@ -10,7 +10,7 @@ $collectedDate = $_POST['collectedDate'];
 
 
 $sql = "UPDATE parcel SET collectStatus='$collectStatus',collectedDate='$collectedDate'
-        WHERE parcelID= '$parcelID'";
+        WHERE parcel.parcelID= '$parcelID'";
 
 $result = mysqli_query($conn, $sql);
 

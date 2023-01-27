@@ -41,7 +41,7 @@ public class ViewVisitor extends AppCompatActivity {
     List<Visitor> visitorList;
 
     EditText edtSearch;
-    String url = "http://192.168.1.113/condoapp/getVisitor.php";
+    String url = "http://192.168.59.86/condoapp/getVisitor.php";
 
     @SuppressLint("MissingInflatedId")
     @Override
