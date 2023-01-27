@@ -11,5 +11,5 @@ Demo Video Link - https://youtu.be/rmZmVaAHUYw
 To start using the application, please follow this step.
 
 1. Use XAMPP Server as we use MySQL database
-2. The SQL code contain in sql file.
+2. The SQL code contain in condoapp sql.sql file.
 3. All the php file used are in php folder
