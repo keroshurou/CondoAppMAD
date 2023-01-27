@@ -26,7 +26,7 @@ import hajarshaufi.parcel.databinding.ActivityLoginBinding;
 public class LoginActivity extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
-    String url = "http://10.131.75.188/condoapp/login.php";
+    String url = "http://192.168.1.113/condoapp/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
         binding.btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(LoginActivity.this,OnBoardingActivity.class);
+                Intent i = new Intent(LoginActivity.this,MainActivityFrag.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

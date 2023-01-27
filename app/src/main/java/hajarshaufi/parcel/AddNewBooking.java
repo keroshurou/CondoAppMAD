@@ -35,6 +35,10 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Written by Qiao Hui
+ */
+
 public class AddNewBooking extends AppCompatActivity {
 
     Spinner spinnerFacility, spinnerTime;
@@ -53,7 +57,7 @@ public class AddNewBooking extends AppCompatActivity {
     ArrayAdapter<String> facilityAdapter;
     RequestQueue requestQueue;
     //String url1 = "http://10.131.77.213/";
-    String url1 = "http://10.131.75.188/condoapp/";
+    String url1 = "http://192.168.1.113/condoapp/";
     //String url1 = "http://10.131.73.139/";
     //String url1 = "http://192.168.0.8/";
 

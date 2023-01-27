@@ -17,6 +17,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivityFrag"
+            android:exported="false"
+            android:label="@string/title_activity_main_frag"
+            android:theme="@style/Theme.CondoApp.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".NotificationSlider"
             android:exported="false">
             <meta-data

@@ -6,6 +6,8 @@
     <string name="parcelBtn1">Insert Parcel Detail</string>
     <string name="parcelBtn2">Edit Parcel Detail</string>
     <string name="parcelBtn3">View Parcel</string>
+    <string name="nav_open">Drawer Open</string>
+    <string name="nav_close">Drawer Closed</string>
 
     <!-- Activity Insert Parcel. -->
     <string name="insPTextInsert">Insert Parcel Information</string>
@@ -101,4 +103,6 @@
         <item>CAR</item>
         <item>MOTORCYCLE</item>
     </string-array>
+    <string name="title_activity_main_frag">MainActivityFrag</string>
+
 </resources>

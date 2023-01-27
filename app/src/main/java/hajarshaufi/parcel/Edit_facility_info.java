@@ -28,7 +28,7 @@ public class Edit_facility_info extends AppCompatActivity {
     EditText etID, etName, etLocation, etCapacity;
 
     private int position;
-    String url1 = "http://10.131.75.188/condoapp/";
+    String url1 = "http://192.168.1.113/condoapp/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -43,9 +43,9 @@ public class ParcelListView extends AppCompatActivity {
     ParcelAdapter parcelAdapter;
     SwipeRefreshLayout swipeRefresh;
     public static ArrayList<Parcel> parcelArrayList = new ArrayList<>();
-    String url = "http://10.131.75.188/condoapp/fetchDataParcel.php";
-    String url1 = "http://10.131.75.188/condoapp/deleteParcel.php";
-    String url3 = "http://10.131.75.188/condoapp/searchParcel.php";
+    String url = "http://192.168.1.113/condoapp/fetchDataParcel.php";
+    String url1 = "http://192.168.1.113/condoapp/deleteParcel.php";
+    String url3 = "http://192.168.1.113/condoapp/searchParcel.php";
     Parcel parcel;
     ImageButton btnSearch;
     EditText edtSearchBar;

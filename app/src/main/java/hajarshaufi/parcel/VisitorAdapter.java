@@ -33,7 +33,7 @@ public class VisitorAdapter extends RecyclerView.Adapter<VisitorAdapter.ViewHold
     Context context;
     List<Visitor> visitor_list;
 
-    String url = "http://10.131.75.188/condoapp/deleteVisitor.php";
+    String url = "http://192.168.1.113/condoapp/deleteVisitor.php";
 
 
     public VisitorAdapter(Context context, List<Visitor> visitor_list) {
