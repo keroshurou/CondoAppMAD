@@ -1,10 +1,10 @@
 # CondoAppMAD
 
 Team Members
-Ong Qiao Hui -  B032010020
-Teoh Soon Ann -  B032010044
-Gugan A/L Manikam - B032010375
-Siti Hajar Binti Azi Shaufi - B032010441
+1. Ong Qiao Hui -  B032010020
+2. Teoh Soon Ann -  B032010044
+3. Gugan A/L Manikam - B032010375
+4. Siti Hajar Binti Azi Shaufi - B032010441
 
 Demo Video Link - https://youtu.be/rmZmVaAHUYw
 
